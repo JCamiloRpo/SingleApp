@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/navegation.js" language="javascript" type="text/javascript"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Barber App</title>
+</head>
+<body>
+	<!-- Splash -->
+	<section id="splash">
+    <div class="container">
+      <div class="content-center">
+        <h1>BARBER APP</h1>
+        <img id="logo" src="img/logo.png" alt="">
+      </div>
+    </div>
+	</section>
+
+	<!-- Login -->
+	<section id="login" class="ocultar">
+    <div class="container">
+      <div class="content-center">
+        <h1>LogIn</h1>
+        <img id="logo2" src="img/logo.png" alt="">
+        <div>
+          <form >
+            <label id="labels" for="user">Usuario</label>
+            <br>
+            <input type="text" id="user" name="user" placeholder="Usuario" required>
+            <br><br>
+            <label id="labels"for="passw">Contraseña</label>
+            <br>
+            <input type="password" id="passw" name="passw" placeholder="Contraseña" required>
+            <br><br>
+            <input type="button" id="btnIngresar" class="btn-primary" value="Ingresar">
+          </form>
+          <input type="button" id="btnRegistrar" class="btn-second" value="Registrar">
+          <br>
+          <a id="btnContraseña" href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+      </div>
+    </div>
+	</section>
+
+	<!-- Registro-->
+	<section id="registro" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent btnLogin">
+          <span class="material-icons">
+            arrow_back
+          </span>
+        </button>
+        <p>
+          <b>Registro</b>
+        </p>
+        <button class="btn-transparent">
+          <span class="material-icons"></span>
+        </button>
+      </div>
+      <div class="content-center">
+        <img id="logo2" src="img/logo.png" alt="">
+        <div>
+          <form>
+            <label id="labels" for="name">Nombre</label>
+            <br>
+            <input type="text" id="name" name="name" placeholder="Nombre" required>
+            <br>
+            <label id="labels"for="email">Correo</label>
+            <br>
+            <input type="text" id="email" name="email" placeholder="Correo" required>
+            <br>
+            <label id="labels" for="user">Usuario</label>
+            <br>
+            <input type="text" id="user" name="user" placeholder="Usuario" required>
+            <br>
+            <label id="labels"for="passw">Contraseña</label>
+            <br>
+            <input type="password" id="passw" name="passw" placeholder="Contraseña" required>
+            <br>
+            <label id="labels" for="confirpassw">Confirmar contraseña</label>
+            <br>
+            <input type="password" id="confirpassw" name="confirpassw" placeholder="Confirmar contraseña" required>
+            <br><br>
+            <input id="btnRegistrarse" type="button" class="btn-primary" value="Registrarse">
+          </form>
+        </div>
+      </div>
+    </div>
+	</section>
+
+  <!-- Recuperar -->
+  <section id="recuperar" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent btnLogin">
+          <span class="material-icons">
+            arrow_back
+          </span>
+        </button>
+        <p>
+          <b>Recuperar contraseña</b>
+        </p>
+        <button class="btn-transparent">
+          <span class="material-icons"></span>
+        </button>
+      </div>
+      <div class="content-center">
+        <div>
+          <form >
+            <label id="labels" for="email">Ingrese el correo asociado a su cuenta</label>
+            <br><br>
+            <input type="text" id="email" name="email" placeholder="Correo" required>
+            <br><br>
+            <input type="button" id="btnRecuperar" class="btn-primary" value="Enviar">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<!-- Inicio -->
+	<section id="inicio" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent">
+          <span class="material-icons"> </span>
+        </button>
+        <p>
+          <b>Inicio</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons">
+            manage_accounts
+          </span>
+        </button>
+      </div>
+
+      <div class="content-center">
+        <h1>BARBER APP</h1>
+        <div class="row">
+          <button id="btnReserva" class="opcion">
+            <div class="gallery">
+              <a href="">
+                <img class="opcion" src="img/opcion.png" alt="">
+              </a>
+              <div class="desc">Reservar</div>
+            </div>
+          </button> 
+          <button id="btnCortes" class="opcion">
+            <div class="gallery">
+              <a href="">
+                <img class="opcion" src="img/opcion.png" alt="">
+              </a>
+              <div class="desc">Cortes</div>
+            </div>
+          </button>
+        </div>
+        <div class="row">
+          <button id="btnCortesfav" class="opcion">
+            <div class="gallery">
+              <a href="">
+                <img class="opcion" src="img/opcion.png" alt="">
+              </a>
+              <div class="desc">Cortes favoritos</div>
+            </div>
+          </button>
+          <button id="btnBarbero" class="opcion">
+            <div class="gallery">
+              <a href="">
+                <img class="opcion" src="img/opcion.png" alt="">
+              </a>
+              <div class="desc"> Barbero</div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>	
+	</section>
+
+	<!-- Reservar -->
+	<section id="reservar" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons">
+            arrow_back
+          </span>
+        </button>
+        <p>
+          <b>Reservas</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons">
+            manage_accounts
+          </span>
+        </button>
+      </div>
+
+      <div class="content-center">
+        <div>
+          <form >
+            <label id="labels" for="corte">Elegir corte</label>
+            <br>
+            <input type="text" id="corte" name="corte" placeholder="Corte" required>
+            <br><br>
+            <label id="labels" for="barbero">Elegir barbero</label>
+            <br>
+            <input type="text" id="barbero" name="barbero" placeholder="Barbero" required>
+            <br><br>
+            <label id="labels" for="date">Elegir fecha y hora</label>
+            <br>
+            <input type="date" id="date" name="date" placeholder="Fecha y hora" required>
+            <br><br>
+            <input type="button" id="btnReservar" class="btn-primary" value="Reservar">
+          </form>
+        </div>
+      </div>
+    </div>  
+	</section>
+
+  <!-- Confirmar -->
+  <section id="confirmreserva" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent" id="btnRetReserva">
+          <span class="material-icons">
+            close
+          </span>
+        </button>
+        <p></p>
+        <button class="btn-transparent">
+          <span class="material-icons"></span>
+        </button>
+      </div>
+      <div class="content-center">
+        <img id="logo" src="img/confirm.png" alt="">
+        <h3>RESERVACIÓN EXITOSA</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <br>
+        <input id="btnConfirm" type="button" class="btn-primary" value="Confirmar">
+      </div>
+    </div>
+  </section>
+
+  <!-- CortesFavoritos -->
+  <section id="cortesfav" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons">
+            arrow_back
+          </span>
+        </button>
+        <p>
+          <b>Cortes favoritos</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons">
+            manage_accounts
+          </span>
+        </button>
+      </div>
+
+      <div class="content-center">
+        <div class="row">
+          <div class="gallery">
+            <!--a href=""-->
+              <img class="opcion" src="img/corte.jpg" alt="">
+            <!--/a-->
+            <div class="desc">Corte 1</div>
+          </div>
+          <div class="gallery">
+            <!--a href=""-->
+              <img class="opcion" src="img/corte2.jpg" alt="">
+            <!--/a-->
+            <div class="desc">Corte 2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cortes -->
+  <section id="cortes" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons">
+            arrow_back
+          </span>
+        </button>
+        <p>
+          <b>Cortes</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons">
+            manage_accounts
+          </span>
+        </button>
+      </div>
+
+      <div class="content-center">
+        <div class="row">
+          <div class="gallery">
+            <a href="" id="btnDetalle">
+              <img class="opcion" src="img/corte.jpg" alt="">
+            </a>
+            <div class="desc">Corte 1</div>
+          </div>
+          <div class="gallery">
+            <!--a href=""-->
+              <img class="opcion" src="img/corte2.jpg" alt="">
+            <!--/a-->
+            <div class="desc">Corte 2</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="gallery">
+            <!--a href=""-->
+              <img class="opcion" src="img/corte3.jpg" alt="">
+            <!--/a-->
+            <div class="desc">Corte 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DetallesCorte -->
+  <section id="detallescorte" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent" id="btnRetCortes">
+          <span class="material-icons">
+            arrow_back
+          </span>
+        </button>
+        <p>
+          <b>Detalles Corte x</b>
+        </p>
+        <button class="btn-transparent">
+          <span class="material-icons"> </span>
+        </button>
+      </div>
+
+      <div class="content-center">
+        <div class="row">
+          <img class="detalle" src="img/corte.jpg" alt="">
+        </div>
+        <div class="row">
+          <p>Corte 1</p>
+        </div>
+        <div class="row">
+          <p>Precio </p>
+        </div>
+        <div class="row">
+          <p>Descripcion</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barberos -->
+  <section id="barberos" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons">
+            keyboard_backspace
+          </span>
+        </button>
+        <p>
+          <b>Barberos</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons">
+            manage_accounts
+          </span>
+        </button>
+      </div>
+
+      <div class="content-center">
+        <div class="row">
+          <div class="gallery">
+            <img class="opcion" src="img/barbero.jpg" alt="">
+            <div class="desc">Barbero 1</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="gallery">
+            <img class="opcion" src="img/barbero.jpg" alt="">
+            <div class="desc">Barbero 2</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="gallery">
+            <img class="opcion" src="img/barbero.jpg" alt="">
+            <div class="desc">Barbero 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perfil -->
+  <section id="perfil" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons">
+            keyboard_backspace
+          </span>
+        </button>
+        <p>
+          <b>Perfil</b>
+        </p>
+        <button class="btn-transparent" id="btnEdit">
+          <span class="material-icons">
+            edit
+          </span>
+        </button>
+      </div>
+
+      <div class="content-center">
+        <div class="row">
+          <img class="detalle" src="img/perfil.png" alt="">
+        </div>
+        <div class="row">
+          <p>Usuario</p>
+        </div>
+        <div class="row">
+          <p>Nombre</p>
+        </div>
+        <div class="row">
+          <p>Correo</p>
+        </div>
+        <div class="row">
+          <input id="btnCerrar" type="button" class="btn-primary" value="Cerrar sesión">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EditarPerfil -->
+  <section id="editperfil" class="ocultar">
+    <div class="container">
+      <div class="navigation">
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons">
+            close
+          </span>
+        </button>
+        <p>
+          Editar datos
+        </p>
+        <button class="btn-transparent">
+          <span class="material-icons"></span>
+        </button>
+      </div>
+
+      <div class="content-center">
+        <div class="row">
+          <img class="detalle" src="img/perfil.png" alt="">
+        </div>
+        <div>
+          <form>
+            <label id="labels" for="user">Usuario</label>
+            <br>
+            <input type="text" id="user" name="user" placeholder="Usuario" required>
+            <br>
+            <label id="labels" for="name">Nombre</label>
+            <br>
+            <input type="text" id="name" name="name" placeholder="Nombre" required>
+            <br>
+            <label id="labels"for="email">Correo</label>
+            <br>
+            <input type="text" id="email" name="email" placeholder="Correo" required>
+            <br>
+            <label id="labels"for="passw">Contraseña</label>
+            <br>
+            <input type="password" id="passw" name="passw" placeholder="Contraseña" required>
+            <br>
+            <label id="labels" for="confirpassw">Confirmar contraseña</label>
+            <br>
+            <input type="password" id="confirpassw" name="confirpassw" placeholder="Confirmar contraseña" required>
+            <br><br>
+            <input id="btnGuardar" type="button" class="btn-primary" value="Guardar cambios">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
