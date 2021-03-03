@@ -8,6 +8,16 @@ $gradient_background1: #72C1AC;
 $gradient_background2:#FFF9DC;
 $hr_background: black;
 $hr_border: black;
+$input_width: 80%;
+$input_boderradius:4px;
+$input_background: white;
+$box_sizing_value: border-box;
+$input_padding: 12px 20px;
+$input_margintop: 8px 0;
+$input_display: inline-block;
+$input_border: 1px solid #ccc;
+$input_hover: #1B4F59;
+
 
 
 @font-face {
@@ -66,14 +76,14 @@ $hr_border: black;
   }
   
   input[type=text], input[type=password], input[type=date], select {
-      width: 80%;
-      padding: 12px 20px;
-      margin-top: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      background-color: white;
+      width: $input_width;
+      padding: $input_padding;
+      margin-top: $input_margintop;
+      display: $input_display;
+      border: $input_border;
+      border-radius: $input_boderradius;
+      box-sizing: $box_sizing_value;
+      background-color:$input_background;
   }
   
   #labels{
@@ -81,16 +91,16 @@ $hr_border: black;
   }
   
   input[type=button] {
-      width: 80%;
+      width: $input_width;
       padding: 14px 20px;
-      margin: 8px 0;
+      margin: $input_margintop;
       border: none;
-      border-radius: 4px;
+      border-radius: $input_boderradius;
       cursor: pointer;
   }
   
   input[type=button]:hover {
-      background-color: #1B4F59;
+      background-color: $input_hover;
   }
   
   
