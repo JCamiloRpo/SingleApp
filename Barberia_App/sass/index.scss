@@ -1,5 +1,207 @@
-$color: red;
+/* Iconos https://material.io/resources/icons/?icon=arrow_back&style=round */
+$text_color: black;
+$width_section:360px;
+$height_section:640px;
+$sizefont_h1:40px;
+$sizefont_h2:30px; 
+$gradient_background1: #72C1AC;
+$gradient_background2:#FFF9DC;
+$hr_background: black;
+$hr_border: black;
 
-body{
-    background: $color;
-}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('font-face-icon.woff2');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body{
+      margin:0;
+  }
+  
+  section{
+      background-image: linear-gradient(to bottom right,$gradient_background,$gradient_background2);
+      width:$width_section;
+      height:$height_section;
+  }
+  
+  p{
+      color:$text_color;
+      margin: 5px;
+  }
+  
+  h1{
+      color:$text_color;
+      font-size:$sizefont_h1;
+      margin-top: 0px;
+      margin-bottom: 10px;
+  }
+  
+  h2{
+      color:$text_color;
+      font-size: $sizefont_h2;
+  }
+  
+  hr{
+      border-color: black;
+      background-color:$hr_background;
+  }
+  
+  input[type=text], input[type=password], input[type=date], select {
+      width: 80%;
+      padding: 12px 20px;
+      margin-top: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      background-color: white;
+  }
+  
+  #labels{
+      color:$text_color;
+  }
+  
+  input[type=button] {
+      width: 80%;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  
+  input[type=button]:hover {
+      background-color: #1B4F59;
+  }
+  
+  
+  #logo{
+      margin: 20px;
+      width: 200px;
+      height: 200px;
+  
+  }
+  
+  .detalle{
+      margin: 10px;
+      width: 150px;
+  }
+  
+  #logo2{
+      margin: 10px;
+      width: 80px;
+      height: 80px;
+  }
+  
+  #splash{
+  
+  }
+  
+  #login{
+      
+  }
+  
+  #registro{
+  
+  }
+  #reservar{
+  
+  }
+  #reservaexitosa{
+  
+  }
+  #menu{
+  
+  }
+  
+  #detallescorte{
+  
+  }
+  
+  #cortes{
+  
+  }
+  
+  #cortesfav{
+  
+  }
+  
+  #barberos{
+  
+  }
+  
+  .ocultar{
+      display: none;
+  }
+  
+  .btn-primary{
+      background-color: Navy;
+      color:white;
+      padding: 10px 20px;
+      text-decoration: none;
+  }
+  
+  .btn-second{
+      background-color: black;
+      color:white;
+      padding: 10px 20px;
+      text-decoration: none;
+  }
+  
+  .volver{
+      margin-left: -300px;
+      line-height: 60px;
+  }
+  
+  div.desc {
+      text-align: center;
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  .row{
+      display: flex;
+      justify-content: space-around;
+      margin: 10px;
+  }
+  
+  .opcion{
+      width: 50%;
+      height: 50%;
+      margin: 0 5px;
+  }
+  
+  .content-center, .title{
+      text-align: center;
+  }
+  
+  .btn-transparent, .btnLogin, .btnInicio, .btnPerfil{
+      background-color: transparent;
+      border-color: transparent;
+  }
+  
+  .navigation{
+      justify-content: space-between;
+      display: flex;
+  }
