@@ -17,6 +17,14 @@ $input_margintop: 8px 0;
 $input_display: inline-block;
 $input_border: 1px solid #ccc;
 $input_hover: #1B4F59;
+$margin_logo: 20px;
+$width_logo: 200px;
+$height_logo: 200px;
+$margin_logo2: 10px;
+$width_logo2: 80px;
+$height_logo2: 80px;
+$margin_detalle: 15px;
+$width_detalle: 150px;
 
 
 
@@ -105,21 +113,21 @@ $input_hover: #1B4F59;
   
   
   #logo{
-      margin: 20px;
-      width: 200px;
-      height: 200px;
+      margin: $margin_logo;
+      width: $width_logo;
+      height: $height_logo;
   
   }
   
   .detalle{
-      margin: 10px;
-      width: 150px;
+      margin: $margin_detalle;
+      width: $width_detalle;
   }
   
   #logo2{
-      margin: 10px;
-      width: 80px;
-      height: 80px;
+      margin: $margin_logo2;
+      width: $width_logo2;
+      height: $height_logo2;
   }
   
   #splash{
