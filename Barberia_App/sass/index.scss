@@ -25,6 +25,8 @@ $width_logo2: 80px;
 $height_logo2: 80px;
 $margin_detalle: 15px;
 $width_detalle: 150px;
+$btn_primarycolor: Navy;
+$btn_secondarycolor:Black;
 
 
 
@@ -172,14 +174,14 @@ $width_detalle: 150px;
   }
   
   .btn-primary{
-      background-color: Navy;
+      background-color:$btn_primarycolor;
       color:white;
       padding: 10px 20px;
       text-decoration: none;
   }
   
   .btn-second{
-      background-color: black;
+      background-color:$btn_secondarycolor;
       color:white;
       padding: 10px 20px;
       text-decoration: none;

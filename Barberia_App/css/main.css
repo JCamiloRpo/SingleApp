@@ -1,9 +1,9 @@
 /* Error: Undefined variable.
  *    ,
- * 59 |       background-image: linear-gradient(to bottom right,$gradient_background,$gradient_background2);
+ * 61 |       background-image: linear-gradient(to bottom right,$gradient_background,$gradient_background2);
  *    |                                                         ^^^^^^^^^^^^^^^^^^^^
  *    '
- *   sass\index.scss 59:57  root stylesheet */
+ *   sass\index.scss 61:57  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 59 \2502        background-image: linear-gradient(to bottom right,$gradient_background,$gradient_background2);\d\a    \2502                                                          ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\index.scss 59:57  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 61 \2502        background-image: linear-gradient(to bottom right,$gradient_background,$gradient_background2);\d\a    \2502                                                          ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\index.scss 61:57  root stylesheet";
 }
