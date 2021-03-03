@@ -27,6 +27,8 @@ $margin_detalle: 15px;
 $width_detalle: 150px;
 $btn_primarycolor: Navy;
 $btn_secondarycolor:Black;
+$volver_marginleft: -300px;
+$volver_lineheight: 60px;
 
 
 
@@ -188,8 +190,8 @@ $btn_secondarycolor:Black;
   }
   
   .volver{
-      margin-left: -300px;
-      line-height: 60px;
+      margin-left: $volver_marginleft;
+      line-height: $volver_lineheight;
   }
   
   div.desc {
