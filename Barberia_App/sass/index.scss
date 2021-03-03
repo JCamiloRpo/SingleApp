@@ -61,7 +61,7 @@ $hr_border: black;
   }
   
   hr{
-      border-color: black;
+      border-color:$hr_border;
       background-color:$hr_background;
   }
   
