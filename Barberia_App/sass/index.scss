@@ -29,6 +29,10 @@ $btn_primarycolor: Navy;
 $btn_secondarycolor:Black;
 $volver_marginleft: -300px;
 $volver_lineheight: 60px;
+$opcion_width: 50%;
+$opcion_height: 50%;
+$opcion_margin: 0 5px;
+$row_margin: 10px;
 
 
 
@@ -205,13 +209,13 @@ $volver_lineheight: 60px;
   .row{
       display: flex;
       justify-content: space-around;
-      margin: 10px;
+      margin: $row_margin;
   }
   
   .opcion{
-      width: 50%;
-      height: 50%;
-      margin: 0 5px;
+      width: $opcion_width;
+      height: $opcion_height;
+      margin: $opcion_margin;
   }
   
   .content-center, .title{
