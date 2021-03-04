@@ -1,24 +1,32 @@
-$margin_logo: 10px;
+$margin_img: 10px;
 $width_logo: 200px;
 $height_logo: 200px;
-$margin_detalle: 15px;
-$width_detalle: 100px;
 
 #logo{
-  margin: $margin_logo;
+  margin: $margin_img;
   width: $width_logo;
   height: $height_logo;
 
 }
 
 #logo2{
-  margin: $margin_logo;
+  margin: $margin_img;
   width: $width_logo / 2;
   height: $height_logo / 2;
 }
 
+.logo-min{
+	width: $width_logo / 4;
+	height: $height_logo / 4;
+}
+
 .detalle{
-  margin: $margin_detalle;
-  width: $width_detalle;
+  margin: $margin_img;
+  width: 100px;
+}
+
+.img-perfil{
+	margin: $margin_img;
+	width: 80px;
 }
 
