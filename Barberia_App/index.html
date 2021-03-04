@@ -127,8 +127,8 @@
         <h1>BARBER APP</h1>
         <div class="cards-list">
   
-          <div class="card" id="btnReserva">
-            <div class="card_image"> 
+          <div class="card-circle" id="btnReserva">
+            <div class="round"> 
               <img src="img/reservar.png" /> 
             </div>
             <div class="card_title">
@@ -136,8 +136,8 @@
             </div>
           </div>
 
-          <div class="card" id="btnBarbero" >
-            <div class="card_image">
+          <div class="card-circle" id="btnBarbero" >
+            <div class="round">
               <img src="img/barberos.png" />
             </div>
             <div class="card_title">
@@ -145,8 +145,8 @@
             </div>
           </div>
 
-          <div class="card" id="btnCortes">
-            <div class="card_image">
+          <div class="card-circle" id="btnCortes">
+            <div class="round">
               <img src="img/cortes.png" />
             </div>
             <div class="card_title">
@@ -154,8 +154,8 @@
             </div>
           </div>
 
-          <div class="card" id="btnCortesfav">
-            <div class="card_image">
+          <div class="card-circle" id="btnCortesfav">
+            <div class="round">
               <img src="img/cortesfav.png" />
             </div>
             <div class="card_title">
@@ -414,20 +414,19 @@
       </nav>
 
       <div class="content-center">
-        <div class="row">
-          <img class="detalle" src="img/perfil.png" alt="">
-        </div>
-        <div class="row">
-          <p>Usuario</p>
-        </div>
-        <div class="row">
-          <p>Nombre</p>
-        </div>
-        <div class="row">
-          <p>Correo</p>
-        </div>
-        <div class="row">
-          <input id="btnCerrar" type="button" class="btn-primary" value="Cerrar sesión">
+        <div class="card-container">
+          <img class="round" src="img/perfil.png" />
+          <h3>Nombre</h3>
+          <h4>Usuario</h4>
+          <h4>Correo</h4>
+          <div class="buttons">
+            <input id="btnCerrar" type="button" class="btn-primary" value="Cerrar sesión">
+          </div>
+
+          <div class="details">
+            <h4>Reserva</h4>
+            <p> Aun no ha realizado ninguna reserva </p>
+          </div>
         </div>
       </div>
     </div>
@@ -452,7 +451,7 @@
 
       <div class="content-center">
         <div class="row">
-          <img class="img-perfil" src="img/perfil.png" alt="">
+          <img class="round" src="img/perfil.png" alt="">
         </div>
         <div>
           <form>

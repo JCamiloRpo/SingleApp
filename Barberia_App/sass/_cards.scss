@@ -1,5 +1,7 @@
 $title_color: black;
-$border_radius: 100px;
+$rounded: 50%;
+$size_circle: 100px;
+$background: linear-gradient(to bottom right, #72C1AC,#FFF9DC);
 
 .cards-list {
   z-index: 0;
@@ -10,27 +12,20 @@ $border_radius: 100px;
   /*flex-direction: column;*/
 }
 
-.card {
+.card-circle {
   margin: 30px auto;
-  width: 100px;
-  height: 100px;
-  border-radius: $border_radius;
+  width: $size_circle;
+  height: $size_circle;
+  border-radius: $rounded;
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.1), -5px -5px 30px 7px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: 0.4s;
 
-  .card_image {
-    width: inherit;
-    height: inherit;
-    border-radius: $border_radius;
-
-    img {
+  .round img {
       width: inherit;
       height: inherit;
-      border-radius: $border_radius;
+      border-radius: $rounded;
       object-fit: cover;
-    }
-  
   }
 
   .card_title {
@@ -49,4 +44,22 @@ $border_radius: 100px;
       -5px -5px 30px 15px rgba(0,0,0,0.22);
   }
 
+}
+
+.card-container {
+  background-image: $background;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  padding-top: 30px;
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.details {
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
 }

@@ -1,6 +1,8 @@
 $margin_img: 10px;
 $width_logo: 200px;
 $height_logo: 200px;
+$rounded: 50%;
+$size_circle: 100px;
 
 #logo{
   margin: $margin_img;
@@ -30,3 +32,8 @@ $height_logo: 200px;
 	width: 80px;
 }
 
+.round {
+    width: $size_circle;
+    height: $size_circle;
+    border-radius: $rounded;
+}
