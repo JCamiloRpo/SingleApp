@@ -1,0 +1,39 @@
+$text_color: black;
+$input_width: 80%;
+$input_boderradius:4px;
+$input_background: white;
+$box_sizing_value: border-box;
+$input_padding: 12px 20px;
+$input_margin: 5px 0;
+$input_display: inline-block;
+$input_border: 1px solid #ccc;
+$input_hover: #1B4F59;
+
+input[type=text], input[type=password], input[type=date], select {
+  width: $input_width;
+  padding: $input_padding;
+  margin: $input_margin;
+  display: $input_display;
+  border: $input_border;
+  border-radius: $input_boderradius;
+  box-sizing: $box_sizing_value;
+  background-color:$input_background;
+}
+
+input[type=button] {
+  width: $input_width;
+  padding: 14px 20px;
+  margin: $input_margin;
+  border: none;
+  border-radius: $input_boderradius;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: $input_hover;
+}
+
+label{
+  color:$text_color;
+}
+

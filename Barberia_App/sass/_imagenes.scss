@@ -1,0 +1,24 @@
+$margin_logo: 10px;
+$width_logo: 200px;
+$height_logo: 200px;
+$margin_detalle: 15px;
+$width_detalle: 100px;
+
+#logo{
+  margin: $margin_logo;
+  width: $width_logo;
+  height: $height_logo;
+
+}
+
+#logo2{
+  margin: $margin_logo;
+  width: $width_logo / 2;
+  height: $height_logo / 2;
+}
+
+.detalle{
+  margin: $margin_detalle;
+  width: $width_detalle;
+}
+

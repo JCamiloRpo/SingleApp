@@ -1,0 +1,31 @@
+$btn_primarycolor: Navy;
+$btn_secondarycolor:Black;
+
+$opcion_width: 50%;
+$opcion_height: 50%;
+$opcion_margin: 0 5px;
+
+.btn-primary{
+  background-color:$btn_primarycolor;
+  color:white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.btn-second{
+  background-color:$btn_secondarycolor;
+  color:white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.btn-transparent, .btnLogin, .btnInicio, .btnPerfil{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.opcion{
+  width: $opcion_width;
+  height: $opcion_height;
+  margin: $opcion_margin;
+}
