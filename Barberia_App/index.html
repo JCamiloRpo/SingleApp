@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="js/navegation.js" language="javascript" type="text/javascript"></script>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/main.min.js" language="javascript" type="text/javascript"></script>
+    <link href="css/main.min.css" rel="stylesheet" type="text/css">
     <title>Barber App</title>
 </head>
 <body>
@@ -26,18 +26,13 @@
         <img id="logo2" src="img/logo.png" alt="">
         <div>
           <form >
-            <label id="labels" for="user">Usuario</label>
-            <br>
-            <input type="text" id="user" name="user" placeholder="Usuario" required>
-            <br><br>
-            <label id="labels"for="passw">Contraseña</label>
-            <br>
-            <input type="password" id="passw" name="passw" placeholder="Contraseña" required>
-            <br><br>
+            <label for="user">Usuario</label> <br>
+            <input type="text" id="user" name="user" placeholder="Usuario" required> <br>
+            <label for="passw">Contraseña</label> <br>
+            <input type="password" id="passw" name="passw" placeholder="Contraseña" required> <br>
             <input type="button" id="btnIngresar" class="btn-primary" value="Ingresar">
+            <input type="button" id="btnRegistrar" class="btn-second" value="Registrar">
           </form>
-          <input type="button" id="btnRegistrar" class="btn-second" value="Registrar">
-          <br>
           <a id="btnContraseña" href="#">¿Olvidaste tu contraseña?</a>
         </div>
       </div>
@@ -47,7 +42,7 @@
 	<!-- Registro-->
 	<section id="registro" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent btnLogin">
           <span class="material-icons">
             arrow_back
@@ -59,32 +54,23 @@
         <button class="btn-transparent">
           <span class="material-icons"></span>
         </button>
-      </div>
+      </nav>
+
       <div class="content-center">
         <img id="logo2" src="img/logo.png" alt="">
         <div>
           <form>
-            <label id="labels" for="name">Nombre</label>
-            <br>
-            <input type="text" id="name" name="name" placeholder="Nombre" required>
-            <br>
-            <label id="labels"for="email">Correo</label>
-            <br>
-            <input type="text" id="email" name="email" placeholder="Correo" required>
-            <br>
-            <label id="labels" for="user">Usuario</label>
-            <br>
-            <input type="text" id="user" name="user" placeholder="Usuario" required>
-            <br>
-            <label id="labels"for="passw">Contraseña</label>
-            <br>
-            <input type="password" id="passw" name="passw" placeholder="Contraseña" required>
-            <br>
-            <label id="labels" for="confirpassw">Confirmar contraseña</label>
-            <br>
-            <input type="password" id="confirpassw" name="confirpassw" placeholder="Confirmar contraseña" required>
-            <br><br>
-            <input id="btnRegistrarse" type="button" class="btn-primary" value="Registrarse">
+            <label for="name">Nombre</label> <br>
+            <input type="text" id="name" name="name" placeholder="Nombre" required> <br>
+            <label for="email">Correo</label> <br>
+            <input type="text" id="email" name="email" placeholder="Correo" required> <br>
+            <label for="user">Usuario</label> <br>
+            <input type="text" id="user" name="user" placeholder="Usuario" required> <br>
+            <label for="passw">Contraseña</label> <br>
+            <input type="password" id="passw" name="passw" placeholder="Contraseña" required> <br>
+            <label for="confirpassw">Confirmar contraseña</label> <br>
+            <input type="password" id="confirpassw" name="confirpassw" placeholder="Confirmar contraseña" required> <br>
+            <input type="button" id="btnRegistrarse" class="btn-primary" value="Registrarse">
           </form>
         </div>
       </div>
@@ -94,7 +80,7 @@
   <!-- Recuperar -->
   <section id="recuperar" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent btnLogin">
           <span class="material-icons">
             arrow_back
@@ -106,14 +92,12 @@
         <button class="btn-transparent">
           <span class="material-icons"></span>
         </button>
-      </div>
+      </nav>
       <div class="content-center">
         <div>
           <form >
-            <label id="labels" for="email">Ingrese el correo asociado a su cuenta</label>
-            <br><br>
-            <input type="text" id="email" name="email" placeholder="Correo" required>
-            <br><br>
+            <label for="email">Ingrese el correo asociado a su cuenta</label> <br>
+            <input type="text" id="email" name="email" placeholder="Correo" required> <br>
             <input type="button" id="btnRecuperar" class="btn-primary" value="Enviar">
           </form>
         </div>
@@ -124,7 +108,8 @@
 	<!-- Inicio -->
 	<section id="inicio" class="ocultar">
     <div class="container">
-      <div class="navigation">
+
+      <nav>
         <button class="btn-transparent">
           <span class="material-icons"> </span>
         </button>
@@ -136,7 +121,7 @@
             manage_accounts
           </span>
         </button>
-      </div>
+      </nav>
 
       <div class="content-center">
         <h1>BARBER APP</h1>
@@ -183,7 +168,7 @@
 	<!-- Reservar -->
 	<section id="reservar" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent btnInicio">
           <span class="material-icons">
             arrow_back
@@ -197,23 +182,17 @@
             manage_accounts
           </span>
         </button>
-      </div>
+      </nav>
 
       <div class="content-center">
         <div>
           <form >
-            <label id="labels" for="corte">Elegir corte</label>
-            <br>
-            <input type="text" id="corte" name="corte" placeholder="Corte" required>
-            <br><br>
-            <label id="labels" for="barbero">Elegir barbero</label>
-            <br>
-            <input type="text" id="barbero" name="barbero" placeholder="Barbero" required>
-            <br><br>
-            <label id="labels" for="date">Elegir fecha y hora</label>
-            <br>
-            <input type="date" id="date" name="date" placeholder="Fecha y hora" required>
-            <br><br>
+            <label for="corte">Elegir corte</label> <br>
+            <input type="text" id="corte" name="corte" placeholder="Corte" required> <br>
+            <label for="barbero">Elegir barbero</label> <br>
+            <input type="text" id="barbero" name="barbero" placeholder="Barbero" required> <br>
+            <label for="date">Elegir fecha y hora</label> <br>
+            <input type="date" id="date" name="date" placeholder="Fecha y hora" required> <br>
             <input type="button" id="btnReservar" class="btn-primary" value="Reservar">
           </form>
         </div>
@@ -241,7 +220,7 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <br>
+         
         <input id="btnConfirm" type="button" class="btn-primary" value="Confirmar">
       </div>
     </div>
@@ -250,7 +229,7 @@
   <!-- CortesFavoritos -->
   <section id="cortesfav" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent btnInicio">
           <span class="material-icons">
             arrow_back
@@ -264,7 +243,7 @@
             manage_accounts
           </span>
         </button>
-      </div>
+      </nav>
 
       <div class="content-center">
         <div class="row">
@@ -288,7 +267,7 @@
   <!-- Cortes -->
   <section id="cortes" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent btnInicio">
           <span class="material-icons">
             arrow_back
@@ -302,7 +281,7 @@
             manage_accounts
           </span>
         </button>
-      </div>
+      </nav>
 
       <div class="content-center">
         <div class="row">
@@ -334,7 +313,7 @@
   <!-- DetallesCorte -->
   <section id="detallescorte" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent" id="btnRetCortes">
           <span class="material-icons">
             arrow_back
@@ -346,7 +325,7 @@
         <button class="btn-transparent">
           <span class="material-icons"> </span>
         </button>
-      </div>
+      </nav>
 
       <div class="content-center">
         <div class="row">
@@ -368,7 +347,7 @@
   <!-- Barberos -->
   <section id="barberos" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent btnInicio">
           <span class="material-icons">
             keyboard_backspace
@@ -382,7 +361,7 @@
             manage_accounts
           </span>
         </button>
-      </div>
+      </nav>
 
       <div class="content-center">
         <div class="row">
@@ -410,7 +389,7 @@
   <!-- Perfil -->
   <section id="perfil" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent btnInicio">
           <span class="material-icons">
             keyboard_backspace
@@ -424,7 +403,7 @@
             edit
           </span>
         </button>
-      </div>
+      </nav>
 
       <div class="content-center">
         <div class="row">
@@ -449,7 +428,7 @@
   <!-- EditarPerfil -->
   <section id="editperfil" class="ocultar">
     <div class="container">
-      <div class="navigation">
+      <nav>
         <button class="btn-transparent btnPerfil">
           <span class="material-icons">
             close
@@ -461,7 +440,7 @@
         <button class="btn-transparent">
           <span class="material-icons"></span>
         </button>
-      </div>
+      </nav>
 
       <div class="content-center">
         <div class="row">
@@ -469,27 +448,17 @@
         </div>
         <div>
           <form>
-            <label id="labels" for="user">Usuario</label>
-            <br>
-            <input type="text" id="user" name="user" placeholder="Usuario" required>
-            <br>
-            <label id="labels" for="name">Nombre</label>
-            <br>
-            <input type="text" id="name" name="name" placeholder="Nombre" required>
-            <br>
-            <label id="labels"for="email">Correo</label>
-            <br>
-            <input type="text" id="email" name="email" placeholder="Correo" required>
-            <br>
-            <label id="labels"for="passw">Contraseña</label>
-            <br>
-            <input type="password" id="passw" name="passw" placeholder="Contraseña" required>
-            <br>
-            <label id="labels" for="confirpassw">Confirmar contraseña</label>
-            <br>
-            <input type="password" id="confirpassw" name="confirpassw" placeholder="Confirmar contraseña" required>
-            <br><br>
-            <input id="btnGuardar" type="button" class="btn-primary" value="Guardar cambios">
+            <label for="user">Usuario</label> <br>
+            <input type="text" id="user" name="user" placeholder="Usuario" required> <br>
+            <label for="name">Nombre</label> <br>
+            <input type="text" id="name" name="name" placeholder="Nombre" required> <br>
+            <label for="email">Correo</label> <br>
+            <input type="text" id="email" name="email" placeholder="Correo" required> <br>
+            <label for="passw">Contraseña</label> <br>
+            <input type="password" id="passw" name="passw" placeholder="Contraseña" required> <br>
+            <label for="confirpassw">Confirmar contraseña</label> <br>
+            <input type="password" id="confirpassw" name="confirpassw" placeholder="Confirmar contraseña" required> <br>
+            <input type="button" id="btnGuardar"  class="btn-primary" value="Guardar cambios">
           </form>
         </div>
       </div>

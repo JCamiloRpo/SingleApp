@@ -23,174 +23,145 @@
 }
 
 body{
-    margin:0;
+  margin:0;
+  font-family: Monaco,Georgia,Times,serif;
 }
 
 section{
-    background-image: linear-gradient(to bottom right,#72C1AC,#FFF9DC);
-    width:360px;
-    height:640px;
+  background-image: linear-gradient(to bottom right,#72C1AC,#FFF9DC);
+  width:360px;
+  height:640px;
 }
 
 p{
-    color:black;
-    margin: 5px;
+  color:black;
+  margin: 5px;
 }
 
 h1{
-    color: black;
-    font-size: 40px;
-    margin-top: 0px;
-    margin-bottom: 10px;
+  color: black;
+  font-size: 40px;
+  margin-top: 0px;
+  padding: 10px;
 }
 
 h2{
-    color: black;
-    font-size: 30px;
+  color: black;
+  font-size: 30px;
 }
 
 hr{
-    border-color: black;
-    background-color: black;
+  border-color: black;
+  background-color: black;
 }
 
 input[type=text], input[type=password], input[type=date], select {
-    width: 80%;
-    padding: 12px 20px;
-    margin-top: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: white;
+  width: 80%;
+  padding: 12px 20px;
+  margin-top: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 #labels{
-    color: black;
+  color: black;
 }
 
 input[type=button] {
-    width: 80%;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 80%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 input[type=button]:hover {
-    background-color: #1B4F59;
+  background-color: #1B4F59;
 }
 
 
 #logo{
-    margin: 20px;
-    width: 200px;
-    height: 200px;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
 
 }
 
 .detalle{
-    margin: 10px;
-    width: 150px;
+  margin: 10px;
+  width: 150px;
 }
 
 #logo2{
-    margin: 10px;
-    width: 80px;
-    height: 80px;
-}
-
-#splash{
-
-}
-
-#login{
-    
-}
-
-#registro{
-
-}
-#reservar{
-
-}
-#reservaexitosa{
-
-}
-#menu{
-
-}
-
-#detallescorte{
-
-}
-
-#cortes{
-
-}
-
-#cortesfav{
-
-}
-
-#barberos{
-
+  margin: 10px;
+  width: 80px;
+  height: 80px;
 }
 
 .ocultar{
-    display: none;
+  display: none;
 }
 
 .btn-primary{
-    background-color: Navy;
-    color:white;
-    padding: 10px 20px;
-    text-decoration: none;
+  background-color: Navy;
+  color:white;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
 .btn-second{
-    background-color: black;
-    color:white;
-    padding: 10px 20px;
-    text-decoration: none;
+  background-color: black;
+  color:white;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
 .volver{
-    margin-left: -300px;
-    line-height: 60px;
+  margin-left: -300px;
+  line-height: 60px;
 }
 
 div.desc {
-    text-align: center;
+  text-align: center;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .row{
-    display: flex;
-    justify-content: space-around;
-    margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
 }
 
 .opcion{
-    width: 50%;
-    height: 50%;
-    margin: 0 5px;
+  width: 50%;
+  height: 50%;
+  margin: 0 5px;
 }
 
 .content-center, .title{
-    text-align: center;
+  text-align: center;
 }
 
 .btn-transparent, .btnLogin, .btnInicio, .btnPerfil{
-    background-color: transparent;
-    border-color: transparent;
+  background-color: transparent;
+  border-color: transparent;
 }
 
-.navigation{
-    justify-content: space-between;
-    display: flex;
+nav{
+  background-color: #72c1ac;
+  justify-content: space-between;
+  display: flex;
+  padding: 5px;
+  margin-bottom: 30px;
+  border-bottom: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
+
