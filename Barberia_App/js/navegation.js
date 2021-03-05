@@ -68,10 +68,10 @@ function crearEventos(){
     btnCerrar.addEventListener("click",irLogin);
     btnGuardar.addEventListener("click",irPerfil);
 
-    for(var i=0; i<=5; i++){
+    for(var i=0; i<=6; i++){
         btnsPerfil[i].addEventListener("click",irPerfil);
     }
-    for(var i=0; i<=4; i++){
+    for(var i=0; i<=5; i++){
         btnsInicio[i].addEventListener("click",irInicio);
     }
     for(var i=0; i<=1; i++){
