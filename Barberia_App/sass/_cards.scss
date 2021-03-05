@@ -1,7 +1,8 @@
-$title_color: black;
+$title_color: white;
 $rounded: 50%;
 $size_circle: 100px;
-$background: linear-gradient(to bottom right, #72C1AC,#FFF9DC);
+$background_img: #fdf0d5;
+$border_card: 5px;
 
 .cards-list {
   z-index: 0;
@@ -47,15 +48,15 @@ $background: linear-gradient(to bottom right, #72C1AC,#FFF9DC);
 }
 
 .card-container {
-  background-image: $background;
-  border-radius: 5px;
-  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
-  padding-top: 30px;
+  background-color: $background;
+  border-radius: $border_card;
   position: relative;
   width: 320px;
   max-width: 100%;
-  text-align: center;
   margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
 }
 
 .details {

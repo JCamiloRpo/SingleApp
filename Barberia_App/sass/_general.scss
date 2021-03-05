@@ -1,10 +1,17 @@
+/* Paleta https://coolors.co/780000-c1121f-fdf0d5-003049-669bbc */
+
 $text_color: black;
 $width_section:360px;
 $height_section:640px;
 $sizefont_h1:40px;
 $sizefont_h2:30px;
-$background: linear-gradient(to bottom right, #72C1AC,#FFF9DC);
+$background: linear-gradient(to bottom right, #669bbc,#fdf0d5);
 $row_margin: 10px;
+$primary_color: #003049;
+$primarylight_color: #669bbc;
+$secund_color: #780000;
+$secundlight_color: #c1121f;
+$light_color: #fdf0d5;
 
 * {
   box-sizing: border-box;
@@ -52,6 +59,10 @@ h3 {
 
 h4 {
   margin: 5px 0;
+}
+
+a{
+  color: $primary_color;
 }
 
 .ocultar{

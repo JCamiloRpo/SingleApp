@@ -3,6 +3,7 @@ $width_logo: 200px;
 $height_logo: 200px;
 $rounded: 50%;
 $size_circle: 100px;
+$background_img: #fdf0d5;
 
 #logo{
   margin: $margin_img;
@@ -12,7 +13,6 @@ $size_circle: 100px;
 }
 
 #logo2{
-  margin: $margin_img;
   width: $width_logo / 2;
   height: $height_logo / 2;
 }
@@ -33,7 +33,8 @@ $size_circle: 100px;
 }
 
 .round {
-    width: $size_circle;
-    height: $size_circle;
-    border-radius: $rounded;
+  width: $size_circle;
+  height: $size_circle;
+  border-radius: $rounded;
+  background-color: $background_img;
 }
