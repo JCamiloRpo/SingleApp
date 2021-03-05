@@ -5,14 +5,14 @@ $rounded: 50%;
 $size_circle: 100px;
 $background_img: #fdf0d5;
 
-#logo{
+.logo{
   margin: $margin_img;
   width: $width_logo;
   height: $height_logo;
 
 }
 
-#logo2{
+.logo2{
   width: $width_logo / 2;
   height: $height_logo / 2;
 }

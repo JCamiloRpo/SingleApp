@@ -2,7 +2,7 @@ $title_color: white;
 $meta_color: #ccc;
 $rounded: 50%;
 $size_circle: 100px;
-$background: #c1121f;
+$background: #003049;
 $background_img: #fdf0d5;
 $border_card: 5px;
 
@@ -64,12 +64,16 @@ $border_card: 5px;
   margin-top: 20px;
 }
 
+.card-small{
+  width: 100px !important;
+}
+
 .card {
   background-color: $background;
   border-radius: $border_card;
   position: relative;
   width: 150px;
-  margin: 5px;
+  margin: 10px;
 
   &:hover {
     box-shadow: 0 10px 20px 10px rgba(black, .2);
