@@ -1,6 +1,8 @@
 $title_color: white;
+$meta_color: #ccc;
 $rounded: 50%;
 $size_circle: 100px;
+$background: #c1121f;
 $background_img: #fdf0d5;
 $border_card: 5px;
 
@@ -63,4 +65,49 @@ $border_card: 5px;
   text-align: center;
   padding: 15px;
   margin-top: 20px;
+}
+
+.card {
+  background-color: $background;
+  border-radius: $border_card;
+  position: relative;
+  width: 150px;
+  margin: 5px;
+
+  &:hover {
+    box-shadow: 0 10px 20px 10px rgba(black, .2);
+  }
+}
+
+.card_link {
+  display: block;
+  text-decoration: none;
+}
+
+.card_img img{
+  background-color: $background_img;
+  border-radius: $border_card;
+  width: 100%;
+}
+
+.card_header {
+  position: relative;
+}
+
+.card_header-title {
+  margin: 0 0 .25em;
+  color: $title_color;
+}
+
+.card_header-meta {
+  margin: 5px;
+  color: $meta_color;
+}
+
+.card_header-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
 }
