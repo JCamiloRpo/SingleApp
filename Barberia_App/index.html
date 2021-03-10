@@ -195,7 +195,64 @@
         <div>
           <form >
             <label for="corte">Elegir corte</label> <br>
-            <input type="text" id="corte" name="corte" placeholder="Corte" required> <br>
+            <div class="selectbox">
+              <div class="select" id="select">
+                <div class="contenido-select">
+                  <h3 class="titulo">Selecciona un corte</h3>
+                </div>
+                <i class="material-icons"> keyboard_arrow_down</i>
+              </div>
+        
+              <div class="opciones" id="opciones">
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte1.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 1</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte2.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 2</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte3.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 3</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte4.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 4</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte5.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 5</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <input type="hidden" id="corte" name="corte"  value="" required>
+
             <label for="barbero">Elegir barbero</label> <br>
             <input type="text" id="barbero" name="barbero" placeholder="Barbero" required> <br>
             <label for="date">Elegir fecha y hora</label> <br>
