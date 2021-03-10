@@ -13,6 +13,7 @@ $border_card: 5px;
   justify-content: space-evenly;
   flex-wrap: wrap;
   /*flex-direction: column;*/
+
 }
 
 .card-circle {
@@ -38,31 +39,24 @@ $border_card: 5px;
     color: $title_color;
   }
 
-  &:hover {
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-      -5px -5px 30px 15px rgba(0,0,0,0.22);
-  }
-
 }
 
-.card-container {
-  background-color: $background;
-  border-radius: $border_card;
-  position: relative;
-  width: 320px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding-top: 30px;
+.card-big {
+  width: 85% !important;
+  margin: 0 auto !important;
   text-align: center;
   box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+
+  .round{
+    margin-top: 30px;
+  }
+  .card_details {
+    text-align: center;
+    padding: 15px;
+  }
 }
 
-.details {
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
+
 
 .card-small{
   width: 100px !important;
@@ -74,41 +68,68 @@ $border_card: 5px;
   position: relative;
   width: 150px;
   margin: 10px;
+  
+  .card_icon {
+    position: absolute;
+    margin: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    a{
+      text-decoration: none;
+    }
+  }
 
-  &:hover {
-    box-shadow: 0 10px 20px 10px rgba(black, .2);
+  .card_link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .card_img img{
+    background-color: $background_img;
+    border-radius: $border_card;
+    width: 100%;
+  }
+
+  .card_header {
+    position: relative;
+
+    .card_header-title {
+      margin: 0 0 .25em;
+      color: $title_color;
+    }
+
+    .card_header-meta {
+      margin: 5px;
+      color: $meta_color;
+    }
+  }
+
+}
+
+/*
+.card {
+  .text {
+     .food {
+        color: $black;
+        text-align: left;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin: 5px 30px;
+     }
+  }
+  .stars {
+     margin: 10px 30px;
+     li a i {
+        color: $star;
+     }
+  }
+  .info {
+     margin: 10px 30px;
   }
 }
 
-.card_link {
-  display: block;
-  text-decoration: none;
-}
 
-.card_img img{
-  background-color: $background_img;
-  border-radius: $border_card;
-  width: 100%;
-}
+*/
 
-.card_header {
-  position: relative;
-}
-
-.card_header-title {
-  margin: 0 0 .25em;
-  color: $title_color;
-}
-
-.card_header-meta {
-  margin: 5px;
-  color: $meta_color;
-}
-
-.card_header-icon {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  width: 20px;
-  height: 20px;
-}
