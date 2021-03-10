@@ -196,14 +196,14 @@
           <form >
             <label for="corte">Elegir corte</label> <br>
             <div class="selectbox">
-              <div class="select" id="select">
+              <div class="select" id="sltCorte">
                 <div class="contenido-select">
                   <h3 class="titulo">Selecciona un corte</h3>
                 </div>
                 <i class="material-icons"> keyboard_arrow_down</i>
               </div>
         
-              <div class="opciones" id="opciones">
+              <div class="opciones" id="optCorte">
                 <a href="#" class="opcion">
                   <div class="contenido-opcion">
                     <img src="img/corte1.png" alt="">
@@ -254,7 +254,55 @@
             <input type="hidden" id="corte" name="corte"  value="" required>
 
             <label for="barbero">Elegir barbero</label> <br>
-            <input type="text" id="barbero" name="barbero" placeholder="Barbero" required> <br>
+            <div class="selectbox">
+              <div class="select" id="sltBarbero">
+                <div class="contenido-select">
+                  <h3 class="titulo">Selecciona un barbero</h3>
+                </div>
+                <i class="material-icons"> keyboard_arrow_down</i>
+              </div>
+        
+              <div class="opciones" id="optBarbero">
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/barbero.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Diego Pérez</h3>
+                      <p class="descripcion">Disponible</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/barbero.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Mateo Soto</h3>
+                      <p class="descripcion">Disponible</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/barbero.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Juan Ríos</h3>
+                      <p class="descripcion">Disponible</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/barbero.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Camilo Saenz</h3>
+                      <p class="descripcion">Disponible</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <input type="hidden" id="barbero" name="barbero" value="" required>
+
             <label for="date">Elegir fecha y hora</label> <br>
             <input type="date" id="date" name="date" placeholder="Fecha y hora" required> <br>
             <input type="button" id="btnReservar" class="btn-primary" value="Reservar">
@@ -532,8 +580,7 @@
               <img src="img/barbero.png"/>
             </div>
             <div class="card_header">
-              <h4 class="card_header-title">Barbero 1</h4>
-              <p class="card_header-meta">Diego Pérez</p>
+              <h4 class="card_header-title">Diego Pérez</h4>
             </div>
           </div>
 
@@ -542,8 +589,7 @@
               <img src="img/barbero.png"/>
             </div>
             <div class="card_header">
-              <h4 class="card_header-title">Barbero 2</h4>
-              <p class="card_header-meta">Mateo Soto</p>
+              <h4 class="card_header-title">Mateo Soto</h4>
             </div>
           </div>
 
@@ -552,9 +598,7 @@
               <img src="img/barbero.png"/>
             </div>
             <div class="card_header">
-              <h4 class="card_header-title">Barbero 3
-              </h4>
-              <p class="card_header-meta">Juan Ríos</p>
+              <h4 class="card_header-title">Juan Ríos</h4>
             </div>
           </div>
 
@@ -563,8 +607,7 @@
               <img src="img/barbero.png"/>
             </div>
             <div class="card_header">
-              <h4 class="card_header-title">Barbero 4</h4>
-              <p class="card_header-meta">Camilo Saenz</p>
+              <h4 class="card_header-title">Camilo Saenz</h4>
             </div>
           </div>
 
