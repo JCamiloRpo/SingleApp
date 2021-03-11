@@ -4,7 +4,6 @@
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/main.min.js" language="javascript" type="text/javascript"></script>
-   
     <link href="css/main.min.css" rel="stylesheet" type="text/css">
     <title>Barber App</title>
 </head>
@@ -70,7 +69,7 @@
             <label for="passw">Contraseña</label> <br>
             <input type="password" id="passwregistro" name="passwregistro" placeholder="Contraseña" required> <br>
             <label for="confirpassw">Confirmar contraseña</label> <br>
-            <input type="password" id="confirpassw" name="confirpassw" placeholder="Confirmar contraseña" required> <br>
+            <input type="password" id="confirpasswregistro" name="confirpasswregistro" placeholder="Confirmar contraseña" required> <br>
             <input type="button" id="btnRegistrarse" class="btn-primary" value="Registrarse">
           </form>
         </div>
@@ -639,18 +638,12 @@
       </nav>
 
       <div class="content-center">
-        <div class="card card-big cl-white">
-          <img class="round" src="img/perfil.png" />
-          <h3>Nombre</h3>
-          <h4>Usuario</h4>
-          <h4>Correo</h4>
+        <div class="card card-big cl-white" id="datosperfil">
+          
           <div class="buttons">
             <input id="btnCerrar" type="button" class="btn-second" value="Cerrar sesión">
           </div>
-
-          <div class="card_details">
-            <h4>Reserva</h4>
-            <p class="cl-white"> Aun no ha realizado ninguna reserva </p>
+          <div class="card_details" id="datosreserva">
           </div>
         </div>
       </div>

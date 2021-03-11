@@ -8,6 +8,7 @@ window.onload = ()=>{
     setTimeout(irLogin,1500);
     crearEventos();
     initSelect();
+    initLocal();
 }
 
 function crearReferencias(){
@@ -54,13 +55,13 @@ function crearEventos(){
     btnIngresar.addEventListener("click",irInicio);
     btnRegistrar.addEventListener("click",irRegistro);
     btnContraseña.addEventListener("click",irRecuperar);
-    btnRegistrarse.addEventListener("click",irInicio);
+    //btnRegistrarse.addEventListener("click",irInicio);
     btnRecuperar.addEventListener("click",irLogin);
     btnReserva.addEventListener("click",irReservar);
     btnCortes.addEventListener("click",irCortes);
     btnCortesfav.addEventListener("click",irCortesFav);
     btnBarbero.addEventListener("click",irBarberos);
-    btnReservar.addEventListener("click",irConfirmReserva);
+    //btnReservar.addEventListener("click",irConfirmReserva);
     btnRetReserva.addEventListener("click",irReservar);
     btnConfirm.addEventListener("click",irInicio);
     btnDetalle.addEventListener("click",irDetalleCorte);
@@ -92,7 +93,6 @@ function irLogin(){
 }
 
 function irInicio(event){
-    
     ocultarSecciones();
     inicio.classList.remove("ocultar");
 }
