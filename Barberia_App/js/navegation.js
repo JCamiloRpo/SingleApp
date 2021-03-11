@@ -52,7 +52,7 @@ function crearReferencias(){
 }
 
 function crearEventos(){
-    btnIngresar.addEventListener("click",irInicio);
+    //btnIngresar.addEventListener("click",irInicio);
     btnRegistrar.addEventListener("click",irRegistro);
     btnContraseña.addEventListener("click",irRecuperar);
     //btnRegistrarse.addEventListener("click",irInicio);

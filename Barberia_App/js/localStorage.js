@@ -1,4 +1,4 @@
-var corte_txt,barbero_txt,fecha_txt,hora_txt, 
+var corte_txt,barbero_txt,fecha_txt,hora_txt, userL_txt, passwL_txt, 
     nameR_txt, emailR_txt, userR_txt, passwR_txt, confirpasswR_txt, datosperfil;
 var contenedor = [], usuarios = [];
 
@@ -6,6 +6,7 @@ function initLocal(){
     usuarios = JSON.parse(localStorage.getItem("usuarios"))==null ? usuarios=[]: JSON.parse(localStorage.getItem("usuarios"));
     initReservas();
     initRegistro();
+    initLogin();
 }
 
 function initReservas(){
@@ -148,4 +149,30 @@ function adecuarCampos(usuario){
     emailR_txt.value="";
     userR_txt.value="";
     passwR_txt.value="";
+    confirpasswR_txt.value="";
+
+    passwL_txt.value="";
+}
+
+function initLogin(){
+    userL_txt = document.getElementById("userlogin");
+    passwL_txt = document.getElementById("passwlogin");
+
+    btnIngresar.addEventListener("click",iniciarSesion);
+}
+
+function iniciarSesion(){
+    if(userL_txt.value=="" || passwL_txt.value==""){
+        alert("Ingrese usuario y contraseña");
+        return false;
+    }
+
+    for(var i in usuarios){
+        if(usuarios[i].user == userL_txt.value && usuarios[i].passw == passwL_txt.value){
+            adecuarCampos(usuarios[i]);
+            irInicio();
+            return true;
+        }
+    }
+    alert("Usuario y/o contraseña incorrectos");
 }
