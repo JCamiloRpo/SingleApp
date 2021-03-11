@@ -7,7 +7,7 @@ window.onload = ()=>{
     crearReferencias();
     setTimeout(irLogin,1500);
     crearEventos();
-    init();
+    initSelect();
 }
 
 function crearReferencias(){

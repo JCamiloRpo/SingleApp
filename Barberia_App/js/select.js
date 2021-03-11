@@ -1,4 +1,6 @@
-function init(){
+/* Creditos: https://github.com/falconmasters/selectbox-personalizado */
+
+function initSelect(){
 
     /* Select Cortes */
     const sltCorte = document.querySelector('#sltCorte');

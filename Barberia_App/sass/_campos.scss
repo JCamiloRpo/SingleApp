@@ -12,7 +12,7 @@ $input_hover: #003049;
 $text_mute: #747474;
 $text_select: #fff;
 
-input[type=text], input[type=password], input[type=date], select {
+input[type=text], input[type=password], input[type=date], input[type=time], select {
   width: $input_width;
   padding: $input_padding;
   margin: $input_margin;
