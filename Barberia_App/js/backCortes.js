@@ -33,6 +33,30 @@ function initCortes(){
     cargarOpciones();
 }
 
+function initCortesFav(){
+    datoscortesfav = current.cortesFav;
+
+    listCortesFav = document.getElementById("listCortesFav");
+    var template='';
+    for(var i in datoscortesfav){
+        if(datoscortes[i]!=null){
+            template +='<div class="card card-small"><div class="card_icon">';
+            template +='<a class="material-icons cl-red" id="btnFavCorteFav_'+datoscortesfav[i].id+'" name="'+datoscortesfav[i].id+'">'+datoscortesfav[i].icon+'</a></div>';
+            template +='<a class="card_link" id="btnDetalleCorte_'+datoscortesfav[i].id+'" name="'+datoscortesfav[i].id+'">';
+            template +='<div class="card_img"><img src="'+datoscortesfav[i].img+'"/></div>';
+            template +='<div class="card_header"><h4 class="card_header-title">'+datoscortesfav[i].name+'</h4>';
+            template +='<p class="card_header-meta">'+datoscortesfav[i].price+'</p></div></a></div>'
+        }
+    }
+    listCortesFav.innerHTML= template=='' ? '<h2 class="cl-mute"> Aun no has agregado cortes a tu lista de favoritos </h2>': template;
+
+    btnsDetalleCortesFav=[];
+    btnsFavCorteFav=[];
+    for(var i=0; i < datoscortesfav.length; i++){
+        btnsDetalleCortesFav.push(document.getElementById("btnDetalleCorte_"+datoscortesfav[i].id));
+        btnsDetalleCortesFav[i].addEventListener("click", irDetalleCorte);
+        btnsFavCorteFav.push(document.getElementById("btnFavCorteFav_"+datoscortesfav[i].id));
+        btnsFavCorteFav[i].addEventListener("click", favorito);
     }
 }
 
