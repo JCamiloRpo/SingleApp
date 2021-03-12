@@ -1,6 +1,6 @@
-var corte_txt,barbero_txt,fecha_txt,hora_txt, userL_txt, passwL_txt, 
+var corte_txt,barbero_txt,fecha_txt,hora_txt, userL_txt, passwL_txt, mensajeConfirmacion,
     nameR_txt, emailR_txt, userR_txt, passwR_txt, confirpasswR_txt, datosperfil;
-var contenedor = [], usuarios = [];
+var contenedor = [], usuarios = [], current={};
 
 function initLocal(){
     //Analizar el local storage
@@ -39,7 +39,7 @@ function registrar(){
     usuario.email = emailR_txt.value;
     usuario.user = userR_txt.value;
     usuario.passw = passwR_txt.value;
-    usuario.reserva = "";
+    usuario.reserva = null;
     //Validar que el usuario no exista
     for(var i in usuarios){
         if(usuarios[i].user == userR_txt.value){
@@ -49,6 +49,7 @@ function registrar(){
     }
     //Agregar el usuario a la cola y al local storage
     usuarios.push(usuario);
+    current=usuario;
     localStorage.setItem("usuarios",JSON.stringify(usuarios));
     //Adecuar los campos de texto y el texto de la info de perfil
     adecuarCampos(usuario);
@@ -64,11 +65,11 @@ function adecuarCampos(usuario){
     datos +='<div class="buttons"> <input id="btnCerrar" type="button" class="btn-second" value="Cerrar sesión"> </div>'
     datos +='<div class="card_details" id="datosreserva">'
     datos += '<h4>Reserva</h4>'
-    if(usuario.reserva==""){
+    if(usuario.reserva==null){
         datos += '<p class="cl-white"> Aun no ha realizado ninguna reserva </p>';
     }
     else{
-        datos += '<p class="cl-white">'+usuario.reserva +'</p>'
+        datos += '<p class="cl-white">'+'Su reserva con el babero'+usuario.reserva.barbero+' es para el corte '+usuario.reserva.corte+' ha sido agendada para el dia '+usuario.reserva.fecha+' a la hora '+usuario.reserva.hora+'<br> Con codigo de reserva: '+usuario.reserva.codigo  +'</p>';
     }
     datos +='</div>'
     datosperfil.innerHTML = datos;
@@ -104,6 +105,7 @@ function iniciarSesion(){
     for(var i in usuarios){
         if(usuarios[i].user == userL_txt.value && usuarios[i].passw == passwL_txt.value){
             adecuarCampos(usuarios[i]);
+            current=usuarios[i];
             irInicio();
             return true;
         }
@@ -117,47 +119,45 @@ function initReservas(){
     barbero_txt = document.getElementById("barbero");
     fecha_txt = document.getElementById("date");
     hora_txt = document.getElementById("time");
+    mensajeConfirmacion = document.getElementById("mensajeConfirmacion");
 
     btnReservar.addEventListener("click",almacenarReserva);
 }
 
-function almacenarReserva(event){
-    event.preventDefault();
-    if(!validarDatos()){return;}
+function almacenarReserva(){
+    if(current.reserva!=null){
+        alert("No puede tener mas de una reserva");
+        return;
+    }
+    if(corte_txt.value=="" || barbero_txt.value=="" || fecha_txt.value=="" || hora_txt.value=="" ){
+        alert("Todos los campos son requeridos");
+        return;
+    }
 
     var reserva = {};
     reserva.corte = corte_txt.value;
     reserva.barbero = barbero_txt.value;
     reserva.fecha = fecha_txt.value;
     reserva.hora = hora_txt.value;
-    
-    contenedor.push(reserva);
-    localStorage.setItem("reserva",JSON.stringify(reserva));
+    reserva.codigo = 1234;
+
+    current.reserva=reserva;
+
+    for(var i in usuarios){
+        if(usuarios[i].user == current.user){
+            usuarios[i] = current;
+            adecuarCampos(current);
+            irConfirmReserva(reserva);
+            localStorage.setItem("usuarios",JSON.stringify(usuarios));
+            return true;
+        }
+    }
 }
 
-function validarDatos(){
-    var resul=false;
-    if(corte_txt.value==""){
-        alert("Debe escoger un corte");
-        return resul;
-    }
-    if(barbero_txt.value==""){
-        alert("Debe escoger un barbero");
-        return resul;
-    }
-    if(fecha_txt.value==""){
-        alert("Debe escoger una fecha");
-        return resul;
-    }
-    if(hora_txt.value==""){
-        alert("Debe escoger una hora");
-        return resul;
-    }
-    return !resul;
-}
-
-function consultarReserva(){
-
+function irConfirmReserva(reserva){
+    mensajeConfirmacion.innerHTML='Su reserva con el babero'+reserva.barbero+' es para el corte '+reserva.corte+' ha sido agendada para el dia '+reserva.fecha+' a la hora '+reserva.hora+'<br> Con codigo de reserva: '+reserva.codigo;
+    ocultarSecciones();
+    confirmreserva.classList.remove("ocultar");
 }
 
 
