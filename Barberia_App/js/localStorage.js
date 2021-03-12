@@ -127,10 +127,10 @@ function initReservas(){
 }
 
 function almacenarReserva(){
-    if(current.reserva!=null){
+    /*if(current.reserva!=null){
         alert("No puede tener mas de una reserva");
         return;
-    }
+    }*/
     if(corte_txt.value=="" || barbero_txt.value=="" || fecha_txt.value=="" || hora_txt.value=="" ){
         alert("Todos los campos son requeridos");
         return;

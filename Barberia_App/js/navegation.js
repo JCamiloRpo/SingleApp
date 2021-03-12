@@ -2,14 +2,15 @@ let splash, login, registro, recuperar, inicio, reservar, confirmreserva, cortes
     editperfil, secciones;
 let btnIngresar, btnRegistrar, btnContraseña, btnRegistrarse, btnRecuperar, btnReservar, btnCortes, btnCortesfav, btnBarbero, 
     btnRetReserva, btnConfirm, btnRetCortes, btnEdit, btnCerrar, btnGuardar, btnsPerfil, btnsInicio, btnsLogin;
+let fav=false;
 
 window.onload = ()=>{
     crearReferencias();
     setTimeout(irLogin,1500);
     crearEventos();
-    initSelect();
     initLocal();
     initCortes();
+    initSelect();
 }
 
 function crearReferencias(){
@@ -93,6 +94,7 @@ function irLogin(){
 
 function irInicio(event){
     ocultarSecciones();
+    fav=false;
     inicio.classList.remove("ocultar");
 }
 
@@ -117,12 +119,15 @@ function irReservar(event){
 function irCortes(event){
     event.preventDefault()
     ocultarSecciones();
-    cortes.classList.remove("ocultar");
+    if(fav) irCortesFav(event);
+    else cortes.classList.remove("ocultar");
 }
 
 function irCortesFav(event){
     event.preventDefault()
     ocultarSecciones();
+    initCortesFav()
+    fav=true;
     cortesfav.classList.remove("ocultar");
 }
 
