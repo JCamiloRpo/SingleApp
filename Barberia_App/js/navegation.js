@@ -1,8 +1,8 @@
 let splash, login, registro, recuperar, inicio, reservar, confirmreserva, cortesfav, cortes, detallescorte, barberos, perfil, 
     editperfil, secciones;
 let btnIngresar, btnRegistrar, btnContraseña, btnRegistrarse, btnRecuperar, btnReservar, btnCortes, btnCortesfav, btnBarbero, 
-    btnRetReserva, btnConfirm, btnRetCortes, btnEdit, btnCerrar, btnGuardar, btnsPerfil, btnsInicio, btnsLogin;
-let fav=false;
+    btnRetReserva, btnConfirm, btnRetCortes, btnEdit, btnCerrar, btnGuardar, btnsPerfil, btnsInicio, btnsLogin, btnReturn;
+let fav=false, reserv=false, barber=false, cort=false;
 
 window.onload = ()=>{
     crearReferencias();
@@ -46,6 +46,7 @@ function crearReferencias(){
     btnCerrar = document.getElementById("btnCerrar");
     btnRetPerfil = document.getElementById("btnRetPerfil");
     btnGuardar = document.getElementById("btnGuardar");
+    btnReturn = document.getElementById("btnReturn");
 
     btnsPerfil = document.querySelectorAll(".btnPerfil");
     btnsInicio = document.querySelectorAll(".btnInicio");
@@ -69,11 +70,12 @@ function crearEventos(){
     btnEdit.addEventListener("click",irEditPerfil);
     btnCerrar.addEventListener("click",irLogin);
     //btnGuardar.addEventListener("click",irPerfil);
+    btnReturn.addEventListener("click",ret);
 
     for(var i=0; i<=5; i++){
         btnsPerfil[i].addEventListener("click",irPerfil);
     }
-    for(var i=0; i<=4; i++){
+    for(var i=0; i<=3; i++){
         btnsInicio[i].addEventListener("click",irInicio);
     }
     for(var i=0; i<=1; i++){
@@ -94,6 +96,9 @@ function irLogin(){
 
 function irInicio(event){
     ocultarSecciones();
+    reserv=false;
+    barber=false;
+    cort=false;
     fav=false;
     inicio.classList.remove("ocultar");
 }
@@ -113,12 +118,14 @@ function irRecuperar(event){
 function irReservar(event){
     event.preventDefault()
     ocultarSecciones();
+    reserv=true;
     reservar.classList.remove("ocultar");
 }
 
 function irCortes(event){
     event.preventDefault()
     ocultarSecciones();
+    cort=true;
     if(fav) irCortesFav(event);
     else cortes.classList.remove("ocultar");
 }
@@ -134,6 +141,7 @@ function irCortesFav(event){
 function irBarberos(event){
     event.preventDefault()
     ocultarSecciones();
+    barber=true;
     barberos.classList.remove("ocultar");
 }
 
@@ -146,4 +154,12 @@ function irEditPerfil(event){
 function irPerfil(){
     ocultarSecciones();
     perfil.classList.remove("ocultar");
+}
+
+function ret(event){
+    if(reserv) irReservar(event);
+    else if(barber) irBarberos(event);
+    else if(cort) irCortes(event);
+    else if(fav) irCortesFav(event);
+    else irInicio(event);
 }

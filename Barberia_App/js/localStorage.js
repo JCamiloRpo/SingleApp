@@ -115,13 +115,13 @@ function iniciarSesion(){
     //Buscar el usuario y validar contraseña
     for(var i in usuarios){
         if(usuarios[i].user == userL_txt.value && usuarios[i].passw == passwL_txt.value){
-            adecuarCampos(usuarios[i]);
             current=usuarios[i];
             datoscortesfav = current.cortesFav;
             if(datoscortesfav==null){
                 datoscortesfav=[];
                 datoscortesfav.length = datoscortes.length;
             }
+            adecuarCampos(usuarios[i]);
             irInicio();
             return true;
         }
