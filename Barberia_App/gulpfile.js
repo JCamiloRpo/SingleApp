@@ -25,9 +25,8 @@ function js(){
 function build(){
 	css();
 	js();
-	return src(['index.html','./css/font-face-icon.woff2','./css/main.min.css','./js/main.min.js', './img/**/*.*'])
+	return src(['./index.html','./css/font-face-icon.woff2','./css/main.min.css','./js/main.min.js', './img/**/*.*'])
 			.pipe(copy('./bundle/'))
-			.pipe(dest('./'))
 }
 
 exports.css = css;
