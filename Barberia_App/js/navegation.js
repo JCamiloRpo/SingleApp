@@ -1,7 +1,7 @@
 let splash, login, registro, recuperar, inicio, reservar, confirmreserva, cortesfav, cortes, detallescorte, barberos, perfil, 
     editperfil, secciones;
 let btnIngresar, btnRegistrar, btnContraseña, btnRegistrarse, btnRecuperar, btnReservar, btnCortes, btnCortesfav, btnBarbero, 
-    btnRetReserva, btnConfirm, btnDetalle, btnRetCortes, btnEdit, btnCerrar, btnGuardar, btnsPerfil, btnsInicio, btnsLogin;
+    btnRetReserva, btnConfirm, btnRetCortes, btnEdit, btnCerrar, btnGuardar, btnsPerfil, btnsInicio, btnsLogin;
 
 window.onload = ()=>{
     crearReferencias();
@@ -9,6 +9,7 @@ window.onload = ()=>{
     crearEventos();
     initSelect();
     initLocal();
+    initCortes();
 }
 
 function crearReferencias(){
@@ -39,7 +40,6 @@ function crearReferencias(){
     btnReservar = document.getElementById("btnReservar");
     btnRetReserva = document.getElementById("btnRetReserva");
     btnConfirm = document.getElementById("btnConfirm");
-    btnDetalle = document.getElementById("btnDetalle");
     btnRetCortes = document.getElementById("btnRetCortes");
     btnEdit = document.getElementById("btnEdit");
     btnCerrar = document.getElementById("btnCerrar");
@@ -64,7 +64,6 @@ function crearEventos(){
     //btnReservar.addEventListener("click",irConfirmReserva);
     btnRetReserva.addEventListener("click",irReservar);
     btnConfirm.addEventListener("click",irInicio);
-    btnDetalle.addEventListener("click",irDetalleCorte);
     btnRetCortes.addEventListener("click",irCortes);
     btnEdit.addEventListener("click",irEditPerfil);
     btnCerrar.addEventListener("click",irLogin);
@@ -131,12 +130,6 @@ function irBarberos(event){
     event.preventDefault()
     ocultarSecciones();
     barberos.classList.remove("ocultar");
-}
-
-function irDetalleCorte(event){
-    event.preventDefault()
-    ocultarSecciones();
-    detallescorte.classList.remove("ocultar");
 }
 
 function irEditPerfil(event){

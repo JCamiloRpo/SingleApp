@@ -35,8 +35,10 @@ input[type=button] {
   border-radius: $input_boderradius;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &::selection, &:active, &:focus{
     background-color: $input_hover;
+    border: $input_borderhover;
+    outline: none;
   }
 }
 
