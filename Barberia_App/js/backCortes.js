@@ -13,17 +13,9 @@ function initCortes(){
     listCortes = document.getElementById("listCortes");
     detalleCorte = document.getElementById("detalleCorte");
     optcorte = document.getElementById("optCorte");
-    
-    cargarCortes();
-    cargarOpciones();
-
-    datoscortesfav = current.cortesFav;
     listCortesFav = document.getElementById("listCortesFav");
-    cargarCortesFav();
-    if(datoscortesfav==null){
-        datoscortesfav=[];
-        datoscortesfav.length = datoscortes.length;
-    }
+    
+    cargarOpciones();
 }
 
 function irDetalleCorte(){
@@ -54,6 +46,7 @@ function favorito(){
 function cargarCortes(){
     var template='';
     for(var i in datoscortes){
+        datoscortes[i].icon = datoscortesfav[i] == null ? datoscortes[i].icon: datoscortesfav[i].icon;
         template +='<div class="card card-small"><div class="card_icon">';
         template +='<a class="material-icons cl-red" id="btnFavCorte_'+datoscortes[i].id+'" name="'+datoscortes[i].id+'">'+datoscortes[i].icon+'</a></div>';
         template +='<a class="card_link" id="btnDetalleCorte_'+datoscortes[i].id+'" name="'+datoscortes[i].id+'">';

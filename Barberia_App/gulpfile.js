@@ -15,7 +15,7 @@ function css(){
 }
 
 function js(){
-	return src(['./js/navegation.js', './js/localStorage.js', './js/backCortes.js' ,'./js/select.js'])
+	return src(['./js/navegation.js', './js/backCortes.js' , './js/localStorage.js', './js/select.js'])
 			.pipe(concat("main.min.js"))
 			.pipe(uglify())
 			.pipe(dest("./js"));
