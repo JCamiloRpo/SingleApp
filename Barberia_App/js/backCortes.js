@@ -24,7 +24,7 @@ function initCortes(){
 
     detalleCorte = document.getElementById("detalleCorte");
     btnsDetalleCortes=[];
-    for(var i=0; i < datoscortes.length; i++){
+    for(var i in datoscortes){
         btnsDetalleCortes.push(document.getElementById("btnDetalleCorte_"+datoscortes[i].id));
         btnsDetalleCortes[i].addEventListener("click", irDetalleCorte);
     }
@@ -52,7 +52,7 @@ function initCortesFav(){
 
     btnsDetalleCortesFav=[];
     btnsFavCorteFav=[];
-    for(var i=0; i < datoscortesfav.length; i++){
+    for(var i in datoscortesfav){
         btnsDetalleCortesFav.push(document.getElementById("btnDetalleCorte_"+datoscortesfav[i].id));
         btnsDetalleCortesFav[i].addEventListener("click", irDetalleCorte);
         btnsFavCorteFav.push(document.getElementById("btnFavCorteFav_"+datoscortesfav[i].id));
