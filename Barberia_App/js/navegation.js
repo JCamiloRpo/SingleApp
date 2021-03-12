@@ -68,7 +68,7 @@ function crearEventos(){
     btnRetCortes.addEventListener("click",irCortes);
     btnEdit.addEventListener("click",irEditPerfil);
     btnCerrar.addEventListener("click",irLogin);
-    btnGuardar.addEventListener("click",irPerfil);
+    //btnGuardar.addEventListener("click",irPerfil);
 
     for(var i=0; i<=5; i++){
         btnsPerfil[i].addEventListener("click",irPerfil);
@@ -143,8 +143,7 @@ function irEditPerfil(event){
     editperfil.classList.remove("ocultar");
 }
 
-function irPerfil(event){
-    event.preventDefault()
+function irPerfil(){
     ocultarSecciones();
     perfil.classList.remove("ocultar");
 }

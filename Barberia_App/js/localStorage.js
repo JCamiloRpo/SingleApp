@@ -1,5 +1,6 @@
 var corte_txt,barbero_txt,fecha_txt,hora_txt, userL_txt, passwL_txt, mensajeConfirmacion, opcionCorte, opcionBarbero,
-    nameR_txt, emailR_txt, userR_txt, passwR_txt, confirpasswR_txt, datosperfil;
+    nameR_txt, emailR_txt, userR_txt, passwR_txt, confirpasswR_txt, datosperfil,
+    nameE_txt, emailE_txt, userE_txt, passwE_txt, confirpasswE_txt;
 var contenedor = [], usuarios = [], current={};
 
 function initLocal(){
@@ -9,6 +10,7 @@ function initLocal(){
     initReservas();
     initRegistro();
     initLogin();
+    initEdit();
 }
 /* Parte para registrar */
 function initRegistro(){
@@ -70,14 +72,14 @@ function adecuarCampos(usuario){
         datos += '<p class="cl-white"> Aun no ha realizado ninguna reserva </p>';
     }
     else{
-        datos += '<p class="cl-white">'+'Su reserva con el babero'+usuario.reserva.barbero+' es para el corte '+usuario.reserva.corte+' ha sido agendada para el dia '+usuario.reserva.fecha+' a la hora '+usuario.reserva.hora+'<br> Con codigo de reserva: '+usuario.reserva.codigo  +'</p>';
+        datos += '<p class="cl-white">'+'Su reserva con el babero '+usuario.reserva.barbero+' es para el corte '+usuario.reserva.corte+' ha sido agendada para el dia '+usuario.reserva.fecha+' a la hora '+usuario.reserva.hora+'<br> Codigo de reserva: '+usuario.reserva.codigo  +'</p>';
     }
     datos +='</div>'
     datosperfil.innerHTML = datos;
     //Crear la referencia al boton de cerrar sesion que se acaba de poner
     btnCerrar = document.getElementById("btnCerrar");
     btnCerrar.addEventListener("click",irLogin);
-    //Vaciar campos
+    //Vaciar campos para el registro
     nameR_txt.value="";
     emailR_txt.value="";
     userR_txt.value="";
@@ -86,6 +88,12 @@ function adecuarCampos(usuario){
     //Dejar el de usuario login como forma de "recordar el usuario"
     userL_txt.value=usuario.user;
     passwL_txt.value="";
+    //Acomodar campos para edit
+    nameE_txt.value=usuario.name;
+    emailE_txt.value=usuario.email;
+    userE_txt.value=usuario.user;
+    passwE_txt.value=usuario.passw;
+    confirpasswE_txt.value="";
 }
 
 /* Parte para login */
@@ -118,6 +126,45 @@ function iniciarSesion(){
         }
     }
     alert("Usuario y/o contraseña incorrectos");
+}
+
+/* Editar datos */
+function initEdit(){
+    nameE_txt = document.getElementById("nameedit");
+    emailE_txt = document.getElementById("emailedit");
+    userE_txt = document.getElementById("useredit");
+    passwE_txt = document.getElementById("passwedit");
+    confirpasswE_txt = document.getElementById("passwconfiredit");
+
+    btnGuardar.addEventListener("click",editarDatos);
+}
+
+function editarDatos(){
+    //Validar que se dijiten datos
+    if(nameE_txt.value=="" || emailE_txt.value=="" || userE_txt.value=="" || passwE_txt.value=="" || confirpasswE_txt.value==""){
+        alert("Debe llenar todos los campos");
+        return false;
+    }
+    //Validar contraseñas
+    if(passwE_txt.value != confirpasswE_txt.value){
+        alert("Las contraseñas no coinciden");
+        return false;
+    }
+    //Actualizar datos del usuario
+    current.name = nameE_txt.value;
+    current.email = emailE_txt.value;
+    current.user = userE_txt.value;
+    current.passw = passwE_txt.value;
+    //Guardarlo
+    for(var i in usuarios){
+        if(usuarios[i].user == current.user){
+            usuarios[i] = current;
+            adecuarCampos(current);
+            localStorage.setItem("usuarios",JSON.stringify(usuarios));
+            irPerfil();
+            return true;
+        }
+    }
 }
 
 /* Parte para reserva */
@@ -164,7 +211,7 @@ function almacenarReserva(){
 }
 
 function irConfirmReserva(reserva){
-    mensajeConfirmacion.innerHTML='Su reserva con el babero'+reserva.barbero+' es para el corte '+reserva.corte+' ha sido agendada para el dia '+reserva.fecha+' a la hora '+reserva.hora+'<br> Con codigo de reserva: '+reserva.codigo;
+    mensajeConfirmacion.innerHTML='Su reserva con el babero '+reserva.barbero+' es para el corte '+reserva.corte+' ha sido agendada para el dia '+reserva.fecha+' a la hora '+reserva.hora+'<br> Codigo de reserva: '+reserva.codigo;
     corte_txt.value="";
     barbero_txt.value="";
     fecha_txt.value="";
@@ -186,6 +233,3 @@ function guardarFavoritos(favoritos){
         }
     }
 }
-
-
-
