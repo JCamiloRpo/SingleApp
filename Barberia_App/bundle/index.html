@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/main.min.js" language="javascript" type="text/javascript"></script>
+    <link href="css/main.min.css" rel="stylesheet" type="text/css">
+    <title>Barber App</title>
+</head>
+<body>
+	<!-- Splash -->
+	<section id="splash">
+    <div class="container">
+      <div class="content-center">
+        <h1>BARBER APP</h1>
+        <img class="logo" src="img/logo.png" alt="">
+      </div>
+    </div>
+	</section>
+
+	<!-- Login -->
+	<section id="login" class="ocultar">
+    <div class="container-fuild">
+      <div class="content-center">
+        <h1>Iniciar sesión</h1>
+        <img class="logo2" src="img/logo.png" alt="">
+        <div>
+          <form >
+            <label for="user">Usuario</label> <br>
+            <input type="text" id="userlogin" name="userlogin" placeholder="Usuario" required> <br>
+            <label for="passw">Contraseña</label> <br>
+            <input type="password" id="passwlogin" name="passwlogin" placeholder="Contraseña" required> <br>
+            <input type="button" id="btnIngresar" class="btn-primary" value="Ingresar">
+            <input type="button" id="btnRegistrar" class="btn-second" value="Registrar">
+          </form>
+          <a id="btnContraseña" href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+      </div>
+    </div>
+	</section>
+
+	<!-- Registro-->
+	<section id="registro" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent btnLogin">
+          <span class="material-icons cl-white">
+            arrow_back
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Registro</b>
+        </p>
+        <button class="btn-transparent">
+          <span class="material-icons"></span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <img class="logo2" src="img/logo.png" alt="">
+        <div>
+          <form>
+            <label for="name">Nombre</label> <br>
+            <input type="text" id="nameregistro" name="nameregistro" placeholder="Nombre" required> <br>
+            <label for="email">Correo</label> <br>
+            <input type="text" id="emailregistro" name="emailregistro" placeholder="Correo" required> <br>
+            <label for="user">Usuario</label> <br>
+            <input type="text" id="userregistro" name="userregistro" placeholder="Usuario" required> <br>
+            <label for="passw">Contraseña</label> <br>
+            <input type="password" id="passwregistro" name="passwregistro" placeholder="Contraseña" required> <br>
+            <label for="confirpassw">Confirmar contraseña</label> <br>
+            <input type="password" id="confirpasswregistro" name="confirpasswregistro" placeholder="Confirmar contraseña" required> <br>
+            <input type="button" id="btnRegistrarse" class="btn-primary" value="Registrarse">
+          </form>
+        </div>
+      </div>
+    </div>
+	</section>
+
+  <!-- Recuperar -->
+  <section id="recuperar" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent btnLogin">
+          <span class="material-icons cl-white">
+            arrow_back
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Recuperar contraseña</b>
+        </p>
+        <button class="btn-transparent">
+          <span class="material-icons"></span>
+        </button>
+      </nav>
+      <div class="content-center">
+        <div>
+          <form >
+            <label for="email">Ingrese el correo asociado a su cuenta</label> <br>
+            <input type="text" id="emailrecuperar" name="emailrecuperar" placeholder="Correo" required> <br>
+            <input type="button" id="btnRecuperar" class="btn-primary" value="Enviar">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<!-- Inicio -->
+	<section id="inicio" class="ocultar">
+    <div class="container">
+
+      <nav class="fixed-top">
+        <button class="btn-transparent">
+          <span class="material-icons cl-white"> </span>
+        </button>
+        <p class="cl-white">
+          <b>Inicio</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons cl-white">
+            manage_accounts
+          </span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <h1>BARBER APP</h1>
+        <div class="cards-list">
+  
+          <div class="card-circle" id="btnReserva">
+            <div class="round"> 
+              <img src="img/reservar.png" /> 
+            </div>
+            <div class="card_title">
+              <p>Reservar</p>
+            </div>
+          </div>
+
+          <div class="card-circle" id="btnBarbero" >
+            <div class="round">
+              <img src="img/barberos.png" />
+            </div>
+            <div class="card_title">
+              <p>Barberos</p>
+            </div>
+          </div>
+
+          <div class="card-circle" id="btnCortes">
+            <div class="round">
+              <img src="img/cortes.png" />
+            </div>
+            <div class="card_title">
+              <p>Cortes</p>
+            </div>
+          </div>
+
+          <div class="card-circle" id="btnCortesfav">
+            <div class="round">
+              <img src="img/cortesfav.png" />
+            </div>
+            <div class="card_title">
+              <p>Cortes favoritos</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer">
+        <img class="logo-min" src="img/logo.png">
+      </div>
+    </div>	
+	</section>
+
+	<!-- Reservar -->
+	<section id="reservar" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons cl-white">
+            arrow_back
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Barber App > Reservas</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons cl-white">
+            manage_accounts
+          </span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <div>
+          <form >
+            <label for="corte">Elegir corte</label> <br>
+            <div class="selectbox">
+              <div class="select" id="sltCorte">
+                <div class="contenido-select" id="opcionCorte">
+                  <h3 class="titulo">Selecciona un corte</h3>
+                </div>
+                <i class="material-icons"> keyboard_arrow_down</i>
+              </div>
+        
+              <div class="opciones" id="optCorte">
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte1.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 1</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte2.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 2</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte3.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 3</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte4.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 4</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/corte5.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Corte 5</h3>
+                      <p class="descripcion">$ 15k</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <input type="hidden" id="corte" name="corte"  value="" required>
+
+            <label for="barbero">Elegir barbero</label> <br>
+            <div class="selectbox">
+              <div class="select" id="sltBarbero">
+                <div class="contenido-select" id="opcionBarbero">
+                  <h3 class="titulo">Selecciona un barbero</h3>
+                </div>
+                <i class="material-icons"> keyboard_arrow_down</i>
+              </div>
+        
+              <div class="opciones" id="optBarbero">
+                <a href="" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/barbero.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Diego Pérez</h3>
+                      <p class="descripcion">Disponible</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/barbero.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Mateo Soto</h3>
+                      <p class="descripcion">Disponible</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/barbero.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Juan Ríos</h3>
+                      <p class="descripcion">Disponible</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="opcion">
+                  <div class="contenido-opcion">
+                    <img src="img/barbero.png" alt="">
+                    <div class="textos">
+                      <h3 class="titulo">Camilo Saenz</h3>
+                      <p class="descripcion">Disponible</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <input type="hidden" id="barbero" name="barbero" value="" required>
+
+            <label for="date">Elegir fecha</label> <br>
+            <input type="date" id="date" name="date" placeholder="Fecha" required> <br>
+            <label for="time">Elegir hora</label> <br>
+            <input type="time" id="time" name="time" placeholder="Hora" required> <br>
+            <input type="button" id="btnReservar" class="btn-primary" value="Reservar">
+          </form>
+        </div>
+      </div>
+    </div>  
+	</section>
+
+  <!-- Confirmar -->
+  <section id="confirmreserva" class="ocultar">
+    <div class="container-fuild">
+      <div class="navigation">
+        <button class="btn-transparent" id="btnRetReserva">
+          <span class="material-icons cl-white">
+            close
+          </span>
+        </button>
+        <p></p>
+        <button class="btn-transparent">
+          <span class="material-icons"></span>
+        </button>
+      </div>
+      <div class="content-center">
+        <img class="logo"  src="img/confirm.png">
+        <h3>RESERVACIÓN EXITOSA</h3>
+        <p id="mensajeConfirmacion">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+         
+        <input id="btnConfirm" type="button" class="btn-primary" value="Confirmar">
+      </div>
+    </div>
+  </section>
+
+  <!-- CortesFavoritos -->
+  <section id="cortesfav" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons cl-white">
+            arrow_back
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Barber App > Cortes favoritos</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons cl-white">
+            manage_accounts
+          </span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <div class="cards-list" id="listCortesFav">
+
+          <div class="card card-small">
+            <div class="card_icon">
+              <a href="" class="material-icons cl-red">
+                favorite
+              </a>
+            </div>
+            <a href="" class="card_link" id="btnDetalle">
+              <div class="card_img">
+                <img src="img/corte2.png"/>
+              </div>
+              <div class="card_header">
+                <h4 class="card_header-title">Corte 2</h4>
+                <p class="card_header-meta">$ 15k</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="card card-small">
+            <div class="card_icon">
+              <a href="" class="material-icons cl-red">
+                favorite
+              </a>
+            </div>
+            <a href="" class="card_link" id="btnDetalle">
+              <div class="card_img">
+                <img src="img/corte5.png"/>
+              </div>
+              <div class="card_header">
+                <h4 class="card_header-title">Corte 5</h4>
+                <p class="card_header-meta">$ 15k</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cortes -->
+  <section id="cortes" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons cl-white">
+            arrow_back
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Barber App > Cortes</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons cl-white">
+            manage_accounts
+          </span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <div class="cards-list" id="listCortes">
+
+          <div class="card card-small">
+            <div class="card_icon">
+              <a href="" class="material-icons cl-red">
+                favorite_border
+              </a>
+            </div>
+            <a href="" class="card_link" id="btnDetalle">
+              
+              <div class="card_img">
+                <img src="img/corte1.png"/>
+              </div>
+              <div class="card_header">
+                <h4 class="card_header-title">Corte 1</h4>
+                <p class="card_header-meta">$ 15k</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="card card-small">
+            <div class="card_icon">
+              <a href="" class="material-icons cl-red">
+                favorite
+              </a>
+            </div>
+            <a href="" class="card_link" id="btnDetalle">
+              
+              <div class="card_img">
+                <img src="img/corte2.png"/>
+              </div>
+              <div class="card_header">
+                <h4 class="card_header-title">Corte 2</h4>
+                <p class="card_header-meta">$ 15k</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="card card-small">
+            <div class="card_icon">
+              <a href="" class="material-icons cl-red">
+                favorite_border
+              </a>
+            </div>
+            <a href="" class="card_link" id="btnDetalle">
+              <div class="card_img">
+                <img src="img/corte3.png"/>
+              </div>
+              <div class="card_header">
+                <h4 class="card_header-title">Corte 3</h4>
+                <p class="card_header-meta">$ 15k</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="card card-small">
+            <div class="card_icon">
+              <a href="" class="material-icons cl-red">
+                favorite_border
+              </a>
+            </div>
+            <a href="" class="card_link" id="btnDetalle">
+              <div class="card_img">
+                <img src="img/corte4.png"/>
+              </div>
+              <div class="card_header">
+                <h4 class="card_header-title">Corte 4</h4>
+                <p class="card_header-meta">$ 15k</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="card card-small">
+            <div class="card_icon">
+              <a href="" class="material-icons cl-red">
+                favorite
+              </a>
+            </div>
+            <a href="" class="card_link" id="btnDetalle">
+              <div class="card_img">
+                <img src="img/corte5.png"/>
+              </div>
+              <div class="card_header">
+                <h4 class="card_header-title">Corte 5</h4>
+                <p class="card_header-meta">$ 15k</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+    </div>
+  </section>
+
+  <!-- DetallesCorte -->
+  <section id="detallescorte" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent" id="btnRetCortes">
+          <span class="material-icons cl-white">
+            arrow_back
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Detalles del Corte</b>
+        </p>
+        <button class="btn-transparent">
+          <span class="material-icons"> </span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <div class="card card-big" id="detalleCorte">
+          <div class="card_icon">
+            <a href class="material-icons cl-red">
+              favorite
+            </a>
+          </div>
+
+          <div class="card_img">
+            <img src="img/corte5.png"/>
+          </div>
+          
+          <div class="card_header">
+            <h4 class="card_header-title">Corte x</h4>
+            <p class="card_header-meta">
+              Precio $ 15k COP <br>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. s
+              Saepe neque veniam alias sit libero officiis iste optio delectus laborum quae
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barberos -->
+  <section id="barberos" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent btnInicio">
+          <span class="material-icons cl-white">
+            keyboard_backspace
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Barber App > Barberos</b>
+        </p>
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons cl-white">
+            manage_accounts
+          </span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <div class="cards-list">
+
+          <div class="card">
+            <div class="card_img">
+              <img src="img/barbero.png"/>
+            </div>
+            <div class="card_header">
+              <h4 class="card_header-title">Diego Pérez</h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_img">
+              <img src="img/barbero.png"/>
+            </div>
+            <div class="card_header">
+              <h4 class="card_header-title">Mateo Soto</h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_img">
+              <img src="img/barbero.png"/>
+            </div>
+            <div class="card_header">
+              <h4 class="card_header-title">Juan Ríos</h4>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card_img">
+              <img src="img/barbero.png"/>
+            </div>
+            <div class="card_header">
+              <h4 class="card_header-title">Camilo Saenz</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perfil -->
+  <section id="perfil" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent" id="btnReturn">
+          <span class="material-icons cl-white">
+            keyboard_backspace
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Barber App > Perfil</b>
+        </p>
+        <button class="btn-transparent" id="btnEdit">
+          <span class="material-icons cl-white">
+            edit
+          </span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <div class="card card-big cl-white" id="datosperfil">
+          
+          <div class="buttons">
+            <input id="btnCerrar" type="button" class="btn-second" value="Cerrar sesión">
+          </div>
+          <div class="card_details" id="datosreserva">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EditarPerfil -->
+  <section id="editperfil" class="ocultar">
+    <div class="container">
+      <nav class="fixed-top">
+        <button class="btn-transparent btnPerfil">
+          <span class="material-icons cl-white">
+            close
+          </span>
+        </button>
+        <p class="cl-white">
+          <b>Barber App > Editar datos</b>
+        </p>
+        <button class="btn-transparent">
+          <span class="material-icons"></span>
+        </button>
+      </nav>
+
+      <div class="content-center">
+        <div class="row">
+          <img class="round" src="img/perfil.png" alt="">
+        </div>
+        <div>
+          <form>
+            <label for="user">Usuario</label> <br>
+            <input type="text" id="useredit" name="useredit" placeholder="Usuario" disabled> <br>
+            <label for="name">Nombre</label> <br>
+            <input type="text" id="nameedit" name="nameedit" placeholder="Nombre" required> <br>
+            <label for="email">Correo</label> <br>
+            <input type="text" id="emailedit" name="emailedit" placeholder="Correo" required> <br>
+            <label for="passw">Contraseña</label> <br>
+            <input type="password" id="passwedit" name="passwedit" placeholder="Contraseña" required> <br>
+            <label for="confirpassw">Confirmar contraseña</label> <br>
+            <input type="password" id="passwconfiredit" name="passwconfiredit" placeholder="Confirmar contraseña" required> <br>
+            <input type="button" id="btnGuardar"  class="btn-primary" value="Guardar cambios">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

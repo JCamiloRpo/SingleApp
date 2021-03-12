@@ -5,6 +5,7 @@ const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
+const copy = require('gulp-copy');
 
 function css(){
 	return src("./sass/**/*.scss")
@@ -21,6 +22,13 @@ function js(){
 			.pipe(dest("./js"));
 }
 
+function build(){
+	return src(['index.html','./css/font-face-icon.woff2','./css/main.min.css','./js/main.min.js', './img/**/*.*'])
+			.pipe(copy('./bundle/'))
+			.pipe(dest('./'))
+}
+
 exports.css = css;
 exports.js = js;
+exports.build = build;
 exports.default= ()=>{};
