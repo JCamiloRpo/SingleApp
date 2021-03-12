@@ -94,6 +94,8 @@ function adecuarCampos(usuario){
     userE_txt.value=usuario.user;
     passwE_txt.value=usuario.passw;
     confirpasswE_txt.value="";
+    
+    cargarCortes();
 }
 
 /* Parte para login */
@@ -120,7 +122,6 @@ function iniciarSesion(){
                 datoscortesfav=[];
                 datoscortesfav.length = datoscortes.length;
             }
-            cargarCortes();
             irInicio();
             return true;
         }
