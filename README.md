@@ -14,3 +14,17 @@ La aplicación estaría enfocada para usuarios de barberías, en un principio se
 
 NOTA: 
  *Al no necesitar internet la app utiliza el local storage para guardar los datos del usuario, la reserva que realiza y los cortes agregados a favoritos
+
+
+# Contacto
+- Juan Camilo Restrepo: 12camilorpo@gmail.com
+- Juan Manuel Zuluaga: juan.zuluagaf@upb.edu.co 
+
+# Creditos
+- Iconos:https://material.io/resources/icons/?icon=arrow_back&style=round 
+- Paleta: https://coolors.co/780000-c1121f-fdf0d5-003049-669bbc
+- Select box: https://github.com/falconmasters/selectbox-personalizado
+- Cards:
+  - https://codepen.io/abhishek747/pen/BbWKVa 
+  - https://codepen.io/FlorinPop17/pen/EJKgKB
+  - https://codepen.io/jonyablonski/pen/NJgjYJ
