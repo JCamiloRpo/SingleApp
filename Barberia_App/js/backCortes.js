@@ -66,16 +66,6 @@ function cargarCortes(){
     }
 }
 
-function cargarOpciones(){
-    var template='';
-    for(var i in datoscortes){
-        template +='<a href="" class="opcion"><div class="contenido-opcion">';
-        template +='<img src="'+datoscortes[i].img+'"alt=""><div class="textos">';
-        template +='<h3 class="titulo">'+datoscortes[i].name+'</h3><p class="descripcion">$ '+datoscortes[i].price+'</p></div></div></a>';
-    }
-    optcorte.innerHTML=template;
-}
-
 function cargarCortesFav(){
     var template='';
     for(var i in datoscortesfav){
@@ -104,7 +94,7 @@ function cargarCortesFav(){
 }
 
 function cargarCorteDetalle(id){
-    var template='<div class="card_icon"><a href class="material-icons cl-red" id="btnFavDetCorte">'+datoscortes[id].icon+'</a></div>';
+    var template='<div class="card_icon"><a class="material-icons cl-red" id="btnFavDetCorte" name="'+datoscortes[id].id+'">'+datoscortes[id].icon+'</a></div>';
     template +='<div class="card_img"><img src="'+datoscortes[id].img+'"/></div>';
     template +='<div class="card_header"><h4 class="card_header-title">'+datoscortes[id].name+'</h4>';
     template +='<p class="card_header-meta">Precio '+datoscortes[id].price+'<br>';
@@ -113,4 +103,14 @@ function cargarCorteDetalle(id){
     detalleCorte.innerHTML=template;
     btnFavDetCorte = document.getElementById("btnFavDetCorte");
     btnFavDetCorte.addEventListener("click", favorito);
+}
+
+function cargarOpciones(){
+    var template='';
+    for(var i in datoscortes){
+        template +='<a href="" class="opcion"><div class="contenido-opcion">';
+        template +='<img src="'+datoscortes[i].img+'"alt=""><div class="textos">';
+        template +='<h3 class="titulo">'+datoscortes[i].name+'</h3><p class="descripcion">$ '+datoscortes[i].price+'</p></div></div></a>';
+    }
+    optcorte.innerHTML=template;
 }
