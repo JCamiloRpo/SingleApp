@@ -133,12 +133,6 @@ function irBarberos(event){
     barberos.classList.remove("ocultar");
 }
 
-function irConfirmReserva(event){
-    event.preventDefault()
-    ocultarSecciones();
-    confirmreserva.classList.remove("ocultar");
-}
-
 function irDetalleCorte(event){
     event.preventDefault()
     ocultarSecciones();

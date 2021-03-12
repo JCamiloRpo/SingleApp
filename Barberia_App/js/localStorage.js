@@ -1,4 +1,4 @@
-var corte_txt,barbero_txt,fecha_txt,hora_txt, userL_txt, passwL_txt, mensajeConfirmacion,
+var corte_txt,barbero_txt,fecha_txt,hora_txt, userL_txt, passwL_txt, mensajeConfirmacion, opcionCorte, opcionBarbero,
     nameR_txt, emailR_txt, userR_txt, passwR_txt, confirpasswR_txt, datosperfil;
 var contenedor = [], usuarios = [], current={};
 
@@ -120,6 +120,8 @@ function initReservas(){
     fecha_txt = document.getElementById("date");
     hora_txt = document.getElementById("time");
     mensajeConfirmacion = document.getElementById("mensajeConfirmacion");
+    opcionCorte = document.getElementById("opcionCorte");
+    opcionBarbero = document.getElementById("opcionBarbero");
 
     btnReservar.addEventListener("click",almacenarReserva);
 }
@@ -156,6 +158,12 @@ function almacenarReserva(){
 
 function irConfirmReserva(reserva){
     mensajeConfirmacion.innerHTML='Su reserva con el babero'+reserva.barbero+' es para el corte '+reserva.corte+' ha sido agendada para el dia '+reserva.fecha+' a la hora '+reserva.hora+'<br> Con codigo de reserva: '+reserva.codigo;
+    corte_txt.value="";
+    barbero_txt.value="";
+    fecha_txt.value="";
+    hora_txt.value="";
+    opcionCorte.innerHTML='<h3 class="titulo">Selecciona un corte</h3>';
+    opcionBarbero.innerHTML='<h3 class="titulo">Selecciona un barbero</h3>';
     ocultarSecciones();
     confirmreserva.classList.remove("ocultar");
 }
