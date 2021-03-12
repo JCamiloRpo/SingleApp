@@ -196,7 +196,7 @@ function almacenarReserva(){
     reserva.barbero = barbero_txt.value;
     reserva.fecha = fecha_txt.value;
     reserva.hora = hora_txt.value;
-    reserva.codigo = 1234;
+    reserva.codigo = Math.floor((Math.random()*1000)+1);
 
     current.reserva=reserva;
 
