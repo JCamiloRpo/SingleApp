@@ -72,7 +72,7 @@ function adecuarCampos(usuario){
         datos += '<p class="cl-white"> Aun no ha realizado ninguna reserva </p>';
     }
     else{
-        datos += '<p class="cl-white">'+'Su reserva con el babero '+usuario.reserva.barbero+' es para el corte '+usuario.reserva.corte+' ha sido agendada para el dia '+usuario.reserva.fecha+' a la hora '+usuario.reserva.hora+'<br> Codigo de reserva: '+usuario.reserva.codigo  +'</p>';
+        datos += '<p class="cl-white">'+'Su reserva con el babero '+'<b>'+usuario.reserva.barbero+'<b/>'+' es para el corte '+usuario.reserva.corte+' ha sido agendada para el dia '+usuario.reserva.fecha+' a la hora '+usuario.reserva.hora+'<br> Codigo de reserva: '+usuario.reserva.codigo  +'</p>';
     }
     datos +='</div>'
     datosperfil.innerHTML = datos;
