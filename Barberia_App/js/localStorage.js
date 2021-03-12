@@ -40,6 +40,7 @@ function registrar(){
     usuario.user = userR_txt.value;
     usuario.passw = passwR_txt.value;
     usuario.reserva = null;
+    usuario.cortesFav = null;
     //Validar que el usuario no exista
     for(var i in usuarios){
         if(usuarios[i].user == userR_txt.value){
@@ -168,8 +169,17 @@ function irConfirmReserva(reserva){
     confirmreserva.classList.remove("ocultar");
 }
 
-
-
+/* Parte para favoritos */
+function guardarFavoritos(favoritos){
+    current.cortesFav = favoritos;
+    for(var i in usuarios){
+        if(usuarios[i].user == current.user){
+            usuarios[i] = current;
+            localStorage.setItem("usuarios",JSON.stringify(usuarios));
+            return true;
+        }
+    }
+}
 
 
 

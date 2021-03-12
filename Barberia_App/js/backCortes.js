@@ -1,5 +1,5 @@
 let datoscortes=[], btnsDetalleCortes=[], datoscortesfav=[], btnsDetalleCortesFav=[], btnsFavCorte=[], btnsFavCorteFav=[];
-let listCortes, listCortesFav, detalleCorte, optcorte;
+let listCortes, listCortesFav, detalleCorte, optcorte, btnFavDetCorte;
 
 function initCortes(){
     var corte1={id=1, icon="favorite_border", img="img/corte1.png", name="Buzz", price="15k COP", details="Consiste en un cabello muy corto, normalmente cortado al 1 y que se pasa por toda la cabeza por igual."};
@@ -11,6 +11,47 @@ function initCortes(){
     datoscortes=[corte1, corte2, corte3, corte4, corte5];
     
     listCortes = document.getElementById("listCortes");
+    detalleCorte = document.getElementById("detalleCorte");
+    optcorte = document.getElementById("optCorte");
+    
+    cargarCortes();
+    cargarOpciones();
+
+    datoscortesfav = current.cortesFav;
+    listCortesFav = document.getElementById("listCortesFav");
+    cargarCortesFav();
+    if(datoscortesfav==null){
+        datoscortesfav=[];
+        datoscortesfav.length = datoscortes.length;
+    }
+}
+
+function irDetalleCorte(){
+    var id = parseInt(this.name)-1;
+    cargarCorteDetalle(id);
+    ocultarSecciones();
+    detallescorte.classList.remove("ocultar");
+}
+
+function favorito(){
+    var id = parseInt(this.name)-1;
+    if(datoscortes[id].icon =="favorite_border"){
+        datoscortes[id].icon="favorite";
+        btnsFavCorte[id] = "favorite";
+        datoscortesfav[id] = datoscortes[id];
+    }
+    else{
+        datoscortes[id].icon="favorite_border";
+        btnsFavCorte[id] = "favorite_border";
+        datoscortesfav[id] = null;
+    }
+    guardarFavoritos(datoscortesfav);
+    cargarCortes();
+    cargarCortesFav();
+    cargarCorteDetalle(id);
+}
+
+function cargarCortes(){
     var template='';
     for(var i in datoscortes){
         template +='<div class="card card-small"><div class="card_icon">';
@@ -22,53 +63,61 @@ function initCortes(){
     }
     listCortes.innerHTML=template;
 
-    detalleCorte = document.getElementById("detalleCorte");
     btnsDetalleCortes=[];
+    btnsFavCorte=[];
     for(var i in datoscortes){
         btnsDetalleCortes.push(document.getElementById("btnDetalleCorte_"+datoscortes[i].id));
         btnsDetalleCortes[i].addEventListener("click", irDetalleCorte);
+        btnsFavCorte.push(document.getElementById("btnFavCorte_"+datoscortes[i].id));
+        btnsFavCorte[i].addEventListener("click", favorito);
     }
-
-    optcorte = document.getElementById("optCorte");
-    cargarOpciones();
 }
 
-function initCortesFav(){
-    datoscortesfav = current.cortesFav;
+function cargarOpciones(){
+    var template='';
+    for(var i in datoscortes){
+        template +='<a href="" class="opcion"><div class="contenido-opcion">';
+        template +='<img src="'+datoscortes[i].img+'"alt=""><div class="textos">';
+        template +='<h3 class="titulo">'+datoscortes[i].name+'</h3><p class="descripcion">$ '+datoscortes[i].price+'</p></div></div></a>';
+    }
+    optcorte.innerHTML=template;
+}
 
-    listCortesFav = document.getElementById("listCortesFav");
+function cargarCortesFav(){
     var template='';
     for(var i in datoscortesfav){
-        if(datoscortes[i]!=null){
+        if(datoscortesfav[i]!=null){
             template +='<div class="card card-small"><div class="card_icon">';
             template +='<a class="material-icons cl-red" id="btnFavCorteFav_'+datoscortesfav[i].id+'" name="'+datoscortesfav[i].id+'">'+datoscortesfav[i].icon+'</a></div>';
-            template +='<a class="card_link" id="btnDetalleCorte_'+datoscortesfav[i].id+'" name="'+datoscortesfav[i].id+'">';
+            template +='<a class="card_link" id="btnDetalleCorteFav_'+datoscortesfav[i].id+'" name="'+datoscortesfav[i].id+'">';
             template +='<div class="card_img"><img src="'+datoscortesfav[i].img+'"/></div>';
             template +='<div class="card_header"><h4 class="card_header-title">'+datoscortesfav[i].name+'</h4>';
             template +='<p class="card_header-meta">'+datoscortesfav[i].price+'</p></div></a></div>'
         }
     }
     listCortesFav.innerHTML= template=='' ? '<h2 class="cl-mute"> Aun no has agregado cortes a tu lista de favoritos </h2>': template;
-
-    btnsDetalleCortesFav=[];
-    btnsFavCorteFav=[];
+    
+    btnsDetalleCortesFav.length = datoscortes.length;
+    btnsFavCorteFav.length = datoscortes.length;
     for(var i in datoscortesfav){
-        btnsDetalleCortesFav.push(document.getElementById("btnDetalleCorte_"+datoscortesfav[i].id));
-        btnsDetalleCortesFav[i].addEventListener("click", irDetalleCorte);
-        btnsFavCorteFav.push(document.getElementById("btnFavCorteFav_"+datoscortesfav[i].id));
-        btnsFavCorteFav[i].addEventListener("click", favorito);
+        if(datoscortesfav[i]!=null){
+            btnsDetalleCortesFav[i] = document.getElementById("btnDetalleCorteFav_"+datoscortesfav[i].id);
+            btnsDetalleCortesFav[i].addEventListener("click", irDetalleCorte);
+            btnsFavCorteFav[i] = document.getElementById("btnFavCorteFav_"+datoscortesfav[i].id);
+            btnsFavCorteFav[i].addEventListener("click", favorito);
+        }
+        
     }
 }
 
-function irDetalleCorte(){
-    var id = parseInt(this.name)-1;
-    var template='<div class="card_icon"><a href class="material-icons cl-red" id="btnFavDetCorte_'+id+'">'+datoscortes[id].icon+'</a></div>';
+function cargarCorteDetalle(id){
+    var template='<div class="card_icon"><a href class="material-icons cl-red" id="btnFavDetCorte">'+datoscortes[id].icon+'</a></div>';
     template +='<div class="card_img"><img src="'+datoscortes[id].img+'"/></div>';
     template +='<div class="card_header"><h4 class="card_header-title">'+datoscortes[id].name+'</h4>';
     template +='<p class="card_header-meta">Precio '+datoscortes[id].price+'<br>';
     template +=datoscortes[id].details+'</p></div>';
 
     detalleCorte.innerHTML=template;
-    ocultarSecciones();
-    detallescorte.classList.remove("ocultar");
+    btnFavDetCorte = document.getElementById("btnFavDetCorte");
+    btnFavDetCorte.addEventListener("click", favorito);
 }

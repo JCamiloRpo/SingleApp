@@ -126,7 +126,7 @@ function irCortes(event){
 function irCortesFav(event){
     event.preventDefault()
     ocultarSecciones();
-    initCortesFav()
+    cargarCortesFav()
     fav=true;
     cortesfav.classList.remove("ocultar");
 }
