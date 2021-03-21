@@ -39,7 +39,6 @@ function html(destino){
 function build_dev(){
 	css("build");
 	js("build");
-	images("build");
 	html("build");
 	return Promise.resolve("Build finished on dev");
 }

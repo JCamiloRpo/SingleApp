@@ -1,8 +1,9 @@
 let splash, login, registro, recuperar, inicio, reservar, confirmreserva, cortesfav, cortes, detallescorte, barberos, perfil, 
-    editperfil, secciones;
+    editperfil, info, secciones;
 let btnIngresar, btnRegistrar, btnContraseña, btnRegistrarse, btnRecuperar, btnReservar, btnCortes, btnCortesfav, btnBarbero, 
-    btnRetReserva, btnConfirm, btnRetCortes, btnEdit, btnCerrar, btnGuardar, btnsPerfil, btnsInicio, btnsLogin, btnReturn;
-let fav=false, reserv=false, barber=false, cort=false;
+    btnRetReserva, btnConfirm, btnRetCortes, btnEdit, btnCerrar, btnGuardar, btnsPerfil, btnsInicio, btnsLogin, btnReturn,
+    btnInfo, btnsInfo;
+let fav=false, reserv=false, barber=false, cort=false, sesion=false;
 
 window.onload = ()=>{
     crearReferencias();
@@ -27,7 +28,8 @@ function crearReferencias(){
     barberos = document.getElementById("barberos");
     perfil = document.getElementById("perfil");
     editperfil = document.getElementById("editperfil");
-    secciones = [splash, login, registro, recuperar, inicio, reservar, confirmreserva, cortesfav, cortes, detallescorte, barberos, perfil, editperfil];
+    info = document.getElementById("info");
+    secciones = [splash, login, registro, recuperar, inicio, reservar, confirmreserva, cortesfav, cortes, detallescorte, barberos, perfil, editperfil, info];
 
     btnIngresar = document.getElementById("btnIngresar");
     btnRegistrar = document.getElementById("btnRegistrar");
@@ -47,10 +49,12 @@ function crearReferencias(){
     btnRetPerfil = document.getElementById("btnRetPerfil");
     btnGuardar = document.getElementById("btnGuardar");
     btnReturn = document.getElementById("btnReturn");
+    btnInfo = document.getElementById("btnInfo");
 
     btnsPerfil = document.querySelectorAll(".btnPerfil");
     btnsInicio = document.querySelectorAll(".btnInicio");
     btnsLogin = document.querySelectorAll(".btnLogin");
+    btnsInfo = document.querySelectorAll(".btnsInfo");
 }
 
 function crearEventos(){
@@ -71,6 +75,7 @@ function crearEventos(){
     btnCerrar.addEventListener("click",irLogin);
     //btnGuardar.addEventListener("click",irPerfil);
     btnReturn.addEventListener("click",ret);
+    btnInfo.addEventListener("click",closeInfo);
 
     for(var i=0; i<=5; i++){
         btnsPerfil[i].addEventListener("click",irPerfil);
@@ -80,6 +85,7 @@ function crearEventos(){
     }
     for(var i=0; i<=1; i++){
         btnsLogin[i].addEventListener("click",irLogin);
+        btnsInfo[i].addEventListener("click",irInfo);
     }
 }
 
@@ -90,6 +96,7 @@ function ocultarSecciones(){
 }
 
 function irLogin(){
+    sesion=false;
     ocultarSecciones();
     login.classList.remove("ocultar");
 }
@@ -100,6 +107,7 @@ function irInicio(event){
     barber=false;
     cort=false;
     fav=false;
+    sesion=true;
     inicio.classList.remove("ocultar");
 }
 
@@ -162,4 +170,15 @@ function ret(event){
     else if(cort) irCortes(event);
     else if(fav) irCortesFav(event);
     else irInicio(event);
+}
+
+function irInfo(){
+    ocultarSecciones();
+    info.classList.remove("ocultar");
+}
+
+function closeInfo(event){
+    ocultarSecciones();
+    if(sesion) irInicio(event);
+    else irLogin(event);
 }

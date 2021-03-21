@@ -49,16 +49,29 @@ $border_card: 5px;
 
 .card-big {
   width: 85% !important;
-  margin: 0 auto !important;
+  margin: 10px auto !important;
   text-align: center;
   box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
 
   .round{
-    margin-top: 30px;
+    margin-top: 10px;
   }
   .card_details {
+    padding: 10px;
     text-align: center;
-    padding: 15px;
+  }
+
+  .card_horizontal{
+    display: flex;
+    align-items: center;
+
+    .card_img img{
+      width: 80px;
+      height: 80px;
+      border-bottom-left-radius: $border_card;
+      border-bottom-right-radius: $border_card;
+      background-color: transparent !important;
+    }
   }
 }
 
@@ -93,22 +106,23 @@ $border_card: 5px;
 
   .card_img img{
     background-color: $background_img;
-    border-radius: $border_card;
+    border-top-left-radius: $border_card;
+    border-top-right-radius: $border_card;
     width: 100%;
   }
 
   .card_header {
+    padding: 5px;
     position: relative;
 
     .card_header-title {
-      margin: 0 0 .25em;
+      margin: 0 0;
       color: $title_color;
     }
 
     .card_header-meta {
       margin: 5px;
       color: $meta_color;
-      padding-bottom: 10px;
     }
   }
 
