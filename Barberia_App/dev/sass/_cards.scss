@@ -47,9 +47,19 @@ $border_card: 5px;
 
 }
 
+@media only screen and (min-width: 710px) {
+  .card-big {
+    width: 40% !important;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .card-big {
+    width: 25% !important;
+  }
+}
+
 .card-big {
-  width: 85% !important;
-  margin: 10px auto !important;
   text-align: center;
   box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
 
@@ -87,6 +97,11 @@ $border_card: 5px;
   position: relative;
   width: 150px;
   margin: 10px;
+
+  &.card-big{
+    width: 85%;
+    margin: 10px auto;
+  }
   
   .card_icon {
     position: absolute;
@@ -114,6 +129,7 @@ $border_card: 5px;
   .card_header {
     padding: 5px;
     position: relative;
+    width: 100%;
 
     .card_header-title {
       margin: 0 0;
