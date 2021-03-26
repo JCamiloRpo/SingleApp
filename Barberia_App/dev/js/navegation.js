@@ -6,6 +6,11 @@ let btnIngresar, btnRegistrar, btnContraseña, btnRegistrarse, btnRecuperar, btn
 let fav=false, reserv=false, barber=false, cort=false, sesion=false;
 
 window.onload = ()=>{
+    var S=document.createElement('style');
+    S.type = 'text/css';
+    S.appendChild(document.createTextNode('section{min-height:'+window.innerHeight+'px !important;'));
+    document.body.appendChild(S);
+
     crearReferencias();
     setTimeout(irLogin,1500);
     crearEventos();
